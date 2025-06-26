@@ -4,13 +4,14 @@
 
 ## 🔗 GitHub Repository
 
-[https://github.com/username/environment](https://github.com/username/environment)
+[https://github.com/f1rdavsi/environment](https://github.com/f1rdavsi/environment)
 *(replace with your actual repository link)*
 
 ## 👥 Team Members
 
 * Firdavs Fozilov
-* \[Add other team members here]
+* Behbudov Muhsin
+* Saidakbar Nemonov
 
 ---
 
@@ -39,10 +40,10 @@ The project also includes an **admin panel** which allows for managing content s
 
 **Features:**
 
+* 🔒 Implement user authentication (login/register)
 * Display of Tajikistan’s nature with photos and descriptions
 * Filter/search locations by category (mountain, lake, river, etc.)
 
-![Homepage Screenshot](https://example.com/homepage.png)
 
 ---
 
@@ -53,7 +54,6 @@ The project also includes an **admin panel** which allows for managing content s
 * List of popular natural and tourist spots
 * Detailed view with descriptions and images
 
-![Tourism Page](https://example.com/tourism.png)
 
 ---
 
@@ -65,7 +65,6 @@ The project also includes an **admin panel** which allows for managing content s
 * Manage user accounts and permissions
 * Monitor and control site content
 
-![Admin Panel](https://example.com/adminpanel.png)
 
 ---
 
