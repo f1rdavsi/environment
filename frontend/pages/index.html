@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment</title>
+    <link rel="stylesheet" href="../styles/stylehome.css">
+</head>
+<body>
+    <header class="header-container">
+        <!-- Background Images -->
+        <div class="background-slider">
+            <div class="bg-slide active" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F5808780.jpg&f=1&nofb=1&ipt=347d9b8fbb1e6c526e159a20b2afd0fa29bf9e6544e61b7f0d2973e52c5abd1b')"></div>
+            <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&h=800&fit=crop')"></div>
+            <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&h=800&fit=crop')"></div>
+        </div>
+        <div class="overlay"></div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div>
+                   <img class='logo-icon' src="../assets/cropped-TJ_Tourism_Logo_white.png" alt="">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="nav-menu">
+                    <a href="#" class="nav-link">HOME</a>
+                    <a href="#" class="nav-link">TOURISM PRODUCTS</a>
+                    <a href="#" class="nav-link">DESTINATIONS</a>
+                    <a href="#" class="nav-link">EVENTS</a>
+                    <a href="#" class="nav-link">INFORMATION</a>
+                    <a href="#" class="nav-link">CONTACTS</a>
+                </div>
+
+                <!-- Right Controls -->
+                <div class="nav-controls">
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn">
+                            <span class="flag">en</span>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <div class="lang-option" data-lang="en" data-flag="🇬🇧">
+                                <span class="flag">en</span>
+                                <span>English</span>
+                            </div>
+                            <div class="lang-option" data-lang="ru" data-flag="🇷🇺">
+                                <span class="flag">ru</span>
+                                <span>Русский</span>
+                            </div>
+                            <div class="lang-option" data-lang="tj" data-flag="🇹🇯">
+                                <span class="flag">tj</span>
+                                <span>Тоҷикӣ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Search -->
+                    <button class="search-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#" class="mobile-nav-link">HOME</a>
+                <a href="#" class="mobile-nav-link">TOURISM PRODUCTS</a>
+                <a href="#" class="mobile-nav-link">DESTINATIONS</a>
+                <a href="#" class="mobile-nav-link">EVENTS</a>
+                <a href="#" class="mobile-nav-link">INFORMATION</a>
+                <a href="#" class="mobile-nav-link">CONTACTS</a>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">TAJIKISTAN</h1>
+                <h2 class="hero-subtitle">LAND OF</h2>
+                <h3 class="hero-description" id="heroDescription">ANCIENT CULTURES</h3>
+            </div>
+        </div>
+	 </header>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
