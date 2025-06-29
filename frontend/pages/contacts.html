@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Environment</title>
+    <title>Contact Us - Tajikistan</title>
     <link rel="stylesheet" href="../styles/stylehome.css">
     <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
 </head>
 <body>
     <header class="header-container">
         <!-- Background Images -->
         <div class="background-slider">
-            <div class="bg-slide active" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F5808780.jpg&f=1&nofb=1&ipt=347d9b8fbb1e6c526e159a20b2afd0fa29bf9e6544e61b7f0d2973e52c5abd1b')"></div>
+            <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&h=800&fit=crop')"></div>
+            <div class="bg-slide" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F5808780.jpg&f=1&nofb=1&ipt=347d9b8fbb1e6c526e159a20b2afd0fa29bf9e6544e61b7f0d2973e52c5abd1b')"></div>
             <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&h=800&fit=crop')"></div>
-            <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&h=800&fit=crop')"></div>
         </div>
         <div class="overlay"></div>
 
@@ -112,9 +113,9 @@
         <!-- Hero Content -->
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">TAJIKISTAN</h1>
-                <h2 class="hero-subtitle">LAND OF</h2>
-                <h3 class="hero-description" id="heroDescription">ANCIENT CULTURES</h3>
+                <h1 class="hero-title">CONTACT US</h1>
+                <h2 class="hero-subtitle">GET IN</h2>
+                <h3 class="hero-description" id="heroDescription">TOUCH</h3>
             </div>
         </div>
 
@@ -128,129 +129,100 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- About Section -->
-        <section class="about-section">
+        <!-- Contact Section -->
+        <section class="contact-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Discover Tajikistan</h2>
-                    <p class="section-subtitle">A land of breathtaking mountains, crystal-clear lakes, and rich cultural heritage</p>
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
                 </div>
-                <div class="about-grid">
-                    <div class="about-card">
-                        <div class="card-icon">🏔️</div>
-                        <h3>Majestic Mountains</h3>
-                        <p>Home to the Pamir Mountains, known as the "Roof of the World", with peaks reaching over 7,000 meters.</p>
+                
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Tourism Street<br>Dushanbe, Tajikistan 734000</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+992 48 123 4567<br>+992 48 123 4568</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@tajikistan-tourism.com<br>support@tajikistan-tourism.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-card">
-                        <div class="card-icon">🏞️</div>
-                        <h3>Natural Beauty</h3>
-                        <p>From the turquoise waters of Iskanderkul to the vast alpine meadows, nature's beauty is everywhere.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-icon">🏛️</div>
-                        <h3>Ancient Culture</h3>
-                        <p>Centuries-old traditions, vibrant bazaars, and warm hospitality define Tajik culture.</p>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="booking">Tour Booking</option>
+                                    <option value="support">Customer Support</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Destinations -->
-        <section class="destinations-section">
+        <!-- Map Section -->
+        <section class="map-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Popular Destinations</h2>
-                    <p class="section-subtitle">Explore the most beautiful places in Tajikistan</p>
+                    <h2 class="section-title">Find Us</h2>
+                    <p class="section-subtitle">Visit our office in the heart of Dushanbe</p>
                 </div>
-                <div class="destinations-grid">
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Pamir Mountains">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-content">
+                            <h3>📍 Our Location</h3>
+                            <p>123 Tourism Street, Dushanbe, Tajikistan</p>
+                            <p>We're located in the central business district, easily accessible by public transport.</p>
                         </div>
-                        <div class="destination-content">
-                            <h3>Pamir Mountains</h3>
-                            <p>Experience the highest peaks and most remote landscapes in Central Asia.</p>
-                            <div class="destination-tags">
-                                <span class="tag">Mountains</span>
-                                <span class="tag">Adventure</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Iskanderkul Lake">
-                        </div>
-                        <div class="destination-content">
-                            <h3>Iskanderkul Lake</h3>
-                            <p>Crystal-clear alpine lake surrounded by stunning mountain scenery.</p>
-                            <div class="destination-tags">
-                                <span class="tag">Lake</span>
-                                <span class="tag">Nature</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Dushanbe">
-                        </div>
-                        <div class="destination-content">
-                            <h3>Dushanbe</h3>
-                            <p>The capital city with modern architecture and traditional bazaars.</p>
-                            <div class="destination-tags">
-                                <span class="tag">City</span>
-                                <span class="tag">Culture</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Categories Section -->
-        <section class="categories-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Explore by Category</h2>
-                    <p class="section-subtitle">Find your perfect adventure</p>
-                </div>
-                <div class="categories-grid">
-                    <div class="category-card">
-                        <div class="category-icon">🏔️</div>
-                        <h3>Mountains</h3>
-                        <p>Climb the highest peaks and explore remote valleys</p>
-                        <a href="#" class="category-link">Explore Mountains</a>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">🏞️</div>
-                        <h3>Lakes</h3>
-                        <p>Discover crystal-clear alpine lakes and rivers</p>
-                        <a href="#" class="category-link">Explore Lakes</a>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">🏛️</div>
-                        <h3>Cultural Sites</h3>
-                        <p>Visit ancient monuments and historical places</p>
-                        <a href="#" class="category-link">Explore Culture</a>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">🏕️</div>
-                        <h3>Adventure</h3>
-                        <p>Hiking, camping, and outdoor activities</p>
-                        <a href="#" class="category-link">Explore Adventure</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Explore Tajikistan?</h2>
-                    <p>Start planning your journey to discover the natural wonders and cultural treasures of this beautiful country.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary">Plan Your Trip</a>
-                        <a href="#" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -292,4 +264,4 @@
 
     <script src="../scripts/script.js"></script>
 </body>
-</html>
+</html> 

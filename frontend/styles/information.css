@@ -1,0 +1,159 @@
+/* Information Page Styles */
+.information-section {
+	padding: 5rem 0;
+}
+
+.info-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+	margin-top: 3rem;
+}
+
+.info-card {
+	background: white;
+	border-radius: 1rem;
+	padding: 2rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='dark'] .info-card {
+	background: #2d3748;
+	color: white;
+}
+
+.info-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	display: block;
+}
+
+.info-card h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: var(--text-dark);
+}
+
+[data-theme='dark'] .info-card h3 {
+	color: var(--text-light);
+}
+
+.info-card p {
+	color: #666;
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
+}
+
+[data-theme='dark'] .info-card p {
+	color: #ccc;
+}
+
+.info-card ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 1.5rem;
+}
+
+.info-card ul li {
+	padding: 0.5rem 0;
+	color: #555;
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+[data-theme='dark'] .info-card ul li {
+	color: #ddd;
+}
+
+.info-card ul li::before {
+	content: "✓";
+	position: absolute;
+	left: 0;
+	color: var(--primary-color);
+	font-weight: bold;
+}
+
+/* Safety Section */
+.safety-section {
+	padding: 3rem 0;
+	background: #f8fafc;
+}
+
+[data-theme='dark'] .safety-section {
+	background: #1a202c;
+}
+
+.safety-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.safety-card {
+	background: white;
+	border-radius: 1rem;
+	padding: 2rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .safety-card {
+	background: #2d3748;
+	color: white;
+}
+
+.safety-card h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: var(--text-dark);
+}
+
+[data-theme='dark'] .safety-card h3 {
+	color: var(--text-light);
+}
+
+.safety-card ul {
+	list-style: none;
+	padding: 0;
+}
+
+.safety-card ul li {
+	padding: 0.5rem 0;
+	color: #555;
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+[data-theme='dark'] .safety-card ul li {
+	color: #ddd;
+}
+
+.safety-card ul li::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: var(--primary-color);
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+/* Responsive adjustments for information */
+@media (max-width: 768px) {
+	.info-grid,
+	.safety-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.info-card,
+	.safety-card {
+		padding: 1.5rem;
+	}
+} 

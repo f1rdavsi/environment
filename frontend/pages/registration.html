@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Tajikistan Tourism</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+</head>
+<body>
+    <div class="reg-wrapper">
+        <div class="reg-logo">
+            <div class="reg-logo-bg">
+                <a href="index.html">
+                    <img src="../assets/cropped-TJ_Tourism_Logo_white.png" alt="Tajikistan Tourism">
+                </a>
+            </div>
+        </div>
+        <div class="reg-title">Create Account</div>
+        <div class="reg-desc">Join our community and discover the beauty of Tajikistan</div>
+        <form class="reg-form">
+            <div class="reg-row">
+                <div class="reg-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="reg-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            <div class="reg-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="reg-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="reg-row">
+                <div class="reg-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="reg-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+            </div>
+            <div class="reg-checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+            <div class="reg-checkbox">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to our newsletter for travel updates</label>
+            </div>
+            <button type="submit" class="reg-btn">Create Account</button>
+        </form>
+        <div class="reg-footer">
+            Already have an account? <a href="login.html">Sign In</a>
+        </div>
+    </div>
+</body>
+</html> 
