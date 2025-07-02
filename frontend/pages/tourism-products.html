@@ -75,13 +75,7 @@
                         </svg>
                     </button>
 
-                    <!-- Search -->
-                    <button class="search-btn">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
-                        </svg>
-                    </button>
-
+                   
                     <!-- Registration -->
                     <a href="registration.html" class="registration-btn">
                         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -89,6 +83,9 @@
                             <path d="M19 13h-2v3h-3v2h3v3h2v-3h3v-2h-3z"/>
                         </svg>
                     </a>
+
+                    <!-- User Menu -->
+                    <div id="user-menu-container"></div>
 
                     <!-- Mobile Menu Toggle -->
                     <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -137,96 +134,21 @@
                     <p class="section-subtitle">Explore our curated selection of tourism products and experiences</p>
                 </div>
                 
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Mountain Trekking">
-                        </div>
-                        <div class="product-content">
-                            <h3>Mountain Trekking</h3>
-                            <p>Experience the thrill of trekking through the majestic Pamir Mountains with experienced guides.</p>
-                            <div class="product-details">
-                                <span class="duration">Duration: 5-14 days</span>
-                                <span class="difficulty">Difficulty: Moderate to Hard</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Cultural Tours">
-                        </div>
-                        <div class="product-content">
-                            <h3>Cultural Tours</h3>
-                            <p>Immerse yourself in Tajik culture with visits to ancient sites, bazaars, and traditional villages.</p>
-                            <div class="product-details">
-                                <span class="duration">Duration: 3-7 days</span>
-                                <span class="difficulty">Difficulty: Easy</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Adventure Sports">
-                        </div>
-                        <div class="product-content">
-                            <h3>Adventure Sports</h3>
-                            <p>From rock climbing to paragliding, experience adrenaline-pumping activities in stunning locations.</p>
-                            <div class="product-details">
-                                <span class="duration">Duration: 1-3 days</span>
-                                <span class="difficulty">Difficulty: Various</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Photography Tours">
-                        </div>
-                        <div class="product-content">
-                            <h3>Photography Tours</h3>
-                            <p>Capture the stunning landscapes and cultural moments with professional photography guidance.</p>
-                            <div class="product-details">
-                                <span class="duration">Duration: 5-10 days</span>
-                                <span class="difficulty">Difficulty: Easy</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Wildlife Watching">
-                        </div>
-                        <div class="product-content">
-                            <h3>Wildlife Watching</h3>
-                            <p>Observe rare wildlife species in their natural habitats across Tajikistan's diverse ecosystems.</p>
-                            <div class="product-details">
-                                <span class="duration">Duration: 3-7 days</span>
-                                <span class="difficulty">Difficulty: Easy to Moderate</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Culinary Tours">
-                        </div>
-                        <div class="product-content">
-                            <h3>Culinary Tours</h3>
-                            <p>Taste traditional Tajik cuisine and learn to cook local dishes with expert chefs.</p>
-                            <div class="product-details">
-                                <span class="duration">Duration: 1-3 days</span>
-                                <span class="difficulty">Difficulty: Easy</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
+                <div class="products-controls">
+                    <input type="text" id="products-search" placeholder="Поиск по названию...">
+                    <select id="products-sort">
+                        <option value="title-asc">По алфавиту (A-Z)</option>
+                        <option value="title-desc">По алфавиту (Z-A)</option>
+                        <option value="difficulty">По сложности</option>
+                    </select>
+                    <select id="products-category-filter">
+                        <option value="">Все категории</option>
+                        <!-- категории будут добавляться динамически -->
+                    </select>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                    <!-- Карточки будут добавляться динамически через JS -->
                 </div>
             </div>
         </section>
@@ -279,6 +201,6 @@
         </div>
     </footer>
 
-    <script src="../scripts/script.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
 </body>
 </html> 

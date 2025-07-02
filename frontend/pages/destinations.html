@@ -75,13 +75,7 @@
                         </svg>
                     </button>
 
-                    <!-- Search -->
-                    <button class="search-btn">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
-                        </svg>
-                    </button>
-
+                  
                     <!-- Registration -->
                     <a href="registration.html" class="registration-btn">
                         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -89,6 +83,9 @@
                             <path d="M19 13h-2v3h-3v2h3v3h2v-3h3v-2h-3z"/>
                         </svg>
                     </a>
+
+                    <!-- User Menu -->
+                    <div id="user-menu-container"></div>
 
                     <!-- Mobile Menu Toggle -->
                     <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -136,98 +133,19 @@
                     <h2 class="section-title">Popular Destinations</h2>
                     <p class="section-subtitle">Discover the most beautiful and fascinating places in Tajikistan</p>
                 </div>
-                
-                <div class="destinations-grid">
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Pamir Mountains">
-                        </div>
-                        <div class="destination-content">
-                            <h3>Pamir Mountains</h3>
-                            <p>Known as the "Roof of the World", the Pamir Mountains offer breathtaking landscapes with peaks reaching over 7,000 meters.</p>
-                            <div class="destination-details">
-                                <span class="location">📍 Gorno-Badakhshan</span>
-                                <span class="altitude">🏔️ Up to 7,495m</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Iskanderkul Lake">
-                        </div>
-                        <div class="destination-content">
-                            <h3>Iskanderkul Lake</h3>
-                            <p>Crystal-clear alpine lake surrounded by stunning mountain scenery, perfect for nature lovers and photographers.</p>
-                            <div class="destination-details">
-                                <span class="location">📍 Fann Mountains</span>
-                                <span class="altitude">🏔️ 2,195m</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Dushanbe">
-                        </div>
-                        <div class="destination-content">
-                            <h3>Dushanbe</h3>
-                            <p>The capital city with modern architecture, traditional bazaars, and rich cultural heritage.</p>
-                            <div class="destination-details">
-                                <span class="location">📍 Central Tajikistan</span>
-                                <span class="altitude">🏔️ 706m</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Wakhan Valley">
-                        </div>
-                        <div class="destination-content">
-                            <h3>Wakhan Valley</h3>
-                            <p>Remote valley with ancient Silk Road history, traditional villages, and stunning mountain views.</p>
-                            <div class="destination-details">
-                                <span class="location">📍 Eastern Pamirs</span>
-                                <span class="altitude">🏔️ 2,600m</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Khorog">
-                        </div>
-                        <div class="destination-content">
-                            <h3>Khorog</h3>
-                            <p>Capital of Gorno-Badakhshan, surrounded by mountains and located at the confluence of three rivers.</p>
-                            <div class="destination-details">
-                                <span class="location">📍 Gorno-Badakhshan</span>
-                                <span class="altitude">🏔️ 2,200m</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="destination-card">
-                        <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Penjikent">
-                        </div>
-                        <div class="destination-content">
-                            <h3>Penjikent</h3>
-                            <p>Ancient city with archaeological sites, traditional architecture, and rich cultural history.</p>
-                            <div class="destination-details">
-                                <span class="location">📍 Sughd Region</span>
-                                <span class="altitude">🏔️ 996m</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
+                <div class="destinations-controls">
+                    <input type="text" id="dest-search" placeholder="Поиск по названию...">
+                    <select id="dest-sort">
+                        <option value="title-asc">По алфавиту (A-Z)</option>
+                        <option value="title-desc">По алфавиту (Z-A)</option>
+                        <option value="region">По региону</option>
+                    </select>
+                    <select id="dest-region-filter">
+                        <option value="">Все регионы</option>
+                        <!-- регионы будут добавляться динамически -->
+                    </select>
                 </div>
+                <div class="destinations-grid" id="destinations-list"></div>
             </div>
         </section>
 
@@ -279,6 +197,6 @@
         </div>
     </footer>
 
-    <script src="../scripts/script.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
 </body>
 </html> 

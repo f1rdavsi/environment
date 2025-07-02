@@ -156,4 +156,55 @@
 	.safety-card {
 		padding: 1.5rem;
 	}
+}
+
+.tajikistan-map-section {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.tajikistan-map-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tajikistan-map {
+	max-width: 100%;
+	height: auto;
+}
+
+.tajikistan-map path {
+	transition: transform 0.2s, fill 0.2s, filter 0.2s;
+	cursor: pointer;
+}
+
+.tajikistan-map #TJSU:hover {
+	transform: translateY(-8px) scale(1.05);
+	fill: #6fa8dc;
+	filter: brightness(1.1);
+}
+
+.tajikistan-map #TJRA:hover {
+	transform: translateY(-8px) scale(1.05);
+	fill: #e0b3ff;
+	filter: brightness(1.1);
+}
+
+.tajikistan-map #TJGB:hover {
+	transform: translateY(-8px) scale(1.05);
+	fill: #ffd966;
+	filter: brightness(1.1);
+}
+
+.tajikistan-map #TJKT:hover {
+	transform: translateY(-8px) scale(1.05);
+	fill: #00cc44;
+	filter: brightness(1.1);
+}
+
+.tajikistan-map #TJDU:hover {
+	transform: translateY(-8px) scale(1.05);
+	fill: #ff9900;
+	filter: brightness(1.1);
 } 

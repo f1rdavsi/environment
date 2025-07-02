@@ -75,13 +75,7 @@
                         </svg>
                     </button>
 
-                    <!-- Search -->
-                    <button class="search-btn">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
-                        </svg>
-                    </button>
-
+                   
                     <!-- Registration -->
                     <a href="registration.html" class="registration-btn">
                         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -89,6 +83,9 @@
                             <path d="M19 13h-2v3h-3v2h3v3h2v-3h3v-2h-3z"/>
                         </svg>
                     </a>
+
+                    <!-- User Menu -->
+                    <div id="user-menu-container"></div>
 
                     <!-- Mobile Menu Toggle -->
                     <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -136,122 +133,20 @@
                     <h2 class="section-title">Upcoming Events</h2>
                     <p class="section-subtitle">Experience the rich culture and traditions of Tajikistan through our exciting events</p>
                 </div>
-                
-                <div class="events-grid">
-                    <div class="event-card">
-                        <div class="event-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Navruz Festival">
-                        </div>
-                        <div class="event-content">
-                            <div class="event-date">
-                                <span class="day">21</span>
-                                <span class="month">MAR</span>
-                            </div>
-                            <h3>Navruz Festival</h3>
-                            <p>Celebrate the Persian New Year with traditional music, dance performances, and cultural exhibitions.</p>
-                            <div class="event-details">
-                                <span class="location">📍 Dushanbe</span>
-                                <span class="time">🕒 10:00 AM</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Book Tickets</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Pamir Music Festival">
-                        </div>
-                        <div class="event-content">
-                            <div class="event-date">
-                                <span class="day">15</span>
-                                <span class="month">JUL</span>
-                            </div>
-                            <h3>Pamir Music Festival</h3>
-                            <p>Traditional music festival featuring local artists and musicians from the Pamir region.</p>
-                            <div class="event-details">
-                                <span class="location">📍 Khorog</span>
-                                <span class="time">🕒 6:00 PM</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Book Tickets</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Silk Road Festival">
-                        </div>
-                        <div class="event-content">
-                            <div class="event-date">
-                                <span class="day">08</span>
-                                <span class="month">SEP</span>
-                            </div>
-                            <h3>Silk Road Festival</h3>
-                            <p>Historical festival celebrating the ancient Silk Road trade routes and cultural exchange.</p>
-                            <div class="event-details">
-                                <span class="location">📍 Penjikent</span>
-                                <span class="time">🕒 11:00 AM</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Book Tickets</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Mountain Film Festival">
-                        </div>
-                        <div class="event-content">
-                            <div class="event-date">
-                                <span class="day">22</span>
-                                <span class="month">OCT</span>
-                            </div>
-                            <h3>Mountain Film Festival</h3>
-                            <p>International film festival showcasing documentaries about mountain life and adventure.</p>
-                            <div class="event-details">
-                                <span class="location">📍 Dushanbe</span>
-                                <span class="time">🕒 7:00 PM</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Book Tickets</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Traditional Craft Fair">
-                        </div>
-                        <div class="event-content">
-                            <div class="event-date">
-                                <span class="day">12</span>
-                                <span class="month">NOV</span>
-                            </div>
-                            <h3>Traditional Craft Fair</h3>
-                            <p>Showcase of traditional Tajik crafts including textiles, pottery, and jewelry making.</p>
-                            <div class="event-details">
-                                <span class="location">📍 Isfara</span>
-                                <span class="time">🕒 9:00 AM</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Book Tickets</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop" alt="Winter Sports Festival">
-                        </div>
-                        <div class="event-content">
-                            <div class="event-date">
-                                <span class="day">20</span>
-                                <span class="month">DEC</span>
-                            </div>
-                            <h3>Winter Sports Festival</h3>
-                            <p>Annual winter sports competition featuring skiing, snowboarding, and ice climbing.</p>
-                            <div class="event-details">
-                                <span class="location">📍 Fann Mountains</span>
-                                <span class="time">🕒 8:00 AM</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Book Tickets</a>
-                        </div>
-                    </div>
+                <div class="events-controls">
+                    <input type="text" id="events-search" placeholder="Поиск по названию...">
+                    <select id="events-sort">
+                        <option value="date-desc">Сначала новые</option>
+                        <option value="date-asc">Сначала старые</option>
+                        <option value="title-asc">По алфавиту (A-Z)</option>
+                        <option value="title-desc">По алфавиту (Z-A)</option>
+                    </select>
+                    <select id="events-location-filter">
+                        <option value="">Все локации</option>
+                        <!-- локации будут добавляться динамически -->
+                    </select>
                 </div>
+                <div class="events-grid" id="events-list"></div>
             </div>
         </section>
 
@@ -303,6 +198,6 @@
         </div>
     </footer>
 
-    <script src="../scripts/script.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
 </body>
 </html> 
