@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinations - Tajikistan</title>
+    <title data-i18n="destinations_page_title">Destinations - Tajikistan</title>
+    <link rel="icon" type="image/x-icon" href="../assets/cropped-TJ_Tourism_Logo_white.png">
     <link rel="stylesheet" href="../styles/stylehome.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/destinations.css">
@@ -30,12 +31,12 @@
 
                 <!-- Desktop Menu -->
                 <div class="nav-menu">
-                    <a href="index.html" class="nav-link">HOME</a>
-                    <a href="tourism-products.html" class="nav-link">TOURISM PRODUCTS</a>
-                    <a href="destinations.html" class="nav-link">DESTINATIONS</a>
-                    <a href="events.html" class="nav-link">EVENTS</a>
-                    <a href="information.html" class="nav-link">INFORMATION</a>
-                    <a href="contacts.html" class="nav-link">CONTACTS</a>
+                    <a href="index.html" class="nav-link" data-i18n="nav_home">HOME</a>
+                    <a href="tourism-products.html" class="nav-link" data-i18n="nav_products">TOURISM PRODUCTS</a>
+                    <a href="destinations.html" class="nav-link" data-i18n="nav_destinations">DESTINATIONS</a>
+                    <a href="events.html" class="nav-link" data-i18n="nav_events">EVENTS</a>
+                    <a href="information.html" class="nav-link" data-i18n="nav_info">INFORMATION</a>
+                    <a href="contacts.html" class="nav-link" data-i18n="nav_contacts">CONTACTS</a>
                 </div>
 
                 <!-- Right Controls -->
@@ -50,17 +51,13 @@
                             </svg>
                         </button>
                         <div class="lang-dropdown" id="langDropdown">
-                            <div class="lang-option" data-lang="en" data-flag="🇬🇧">
+                            <div class="lang-option" data-lang="en" data-flag="en">
                                 <span class="flag">en</span>
                                 <span>English</span>
                             </div>
-                            <div class="lang-option" data-lang="ru" data-flag="🇷🇺">
-                                <span class="flag">ru</span>
-                                <span>Русский</span>
-                            </div>
-                            <div class="lang-option" data-lang="tj" data-flag="🇹🇯">
-                                <span class="flag">tj</span>
-                                <span>Тоҷикӣ</span>
+                            <div class="lang-option" data-lang="ko" data-flag="🇰🇷">
+                                <span class="flag">ko</span>
+                                <span>한국어</span>
                             </div>
                         </div>
                     </div>
@@ -98,20 +95,20 @@
 
             <!-- Mobile Menu -->
             <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html" class="mobile-nav-link">HOME</a>
-                <a href="tourism-products.html" class="mobile-nav-link">TOURISM PRODUCTS</a>
-                <a href="destinations.html" class="mobile-nav-link">DESTINATIONS</a>
-                <a href="events.html" class="mobile-nav-link">EVENTS</a>
-                <a href="information.html" class="mobile-nav-link">INFORMATION</a>
-                <a href="contacts.html" class="mobile-nav-link">CONTACTS</a>
+                <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">HOME</a>
+                <a href="tourism-products.html" class="mobile-nav-link" data-i18n="nav_products">TOURISM PRODUCTS</a>
+                <a href="destinations.html" class="mobile-nav-link" data-i18n="nav_destinations">DESTINATIONS</a>
+                <a href="events.html" class="mobile-nav-link" data-i18n="nav_events">EVENTS</a>
+                <a href="information.html" class="mobile-nav-link" data-i18n="nav_info">INFORMATION</a>
+                <a href="contacts.html" class="mobile-nav-link" data-i18n="nav_contacts">CONTACTS</a>
             </div>
         </nav>
 
         <!-- Hero Content -->
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">DESTINATIONS</h1>
-                <h2 class="hero-subtitle">EXPLORE</h2>
+                <h1 class="hero-title" id="heroTitle">DESTINATIONS</h1>
+                <h2 class="hero-subtitle" id="heroSubtitle">EXPLORE</h2>
                 <h3 class="hero-description" id="heroDescription">AMAZING PLACES</h3>
             </div>
         </div>
@@ -130,18 +127,18 @@
         <section class="destinations-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Popular Destinations</h2>
-                    <p class="section-subtitle">Discover the most beautiful and fascinating places in Tajikistan</p>
+                    <h2 class="section-title" data-i18n="destinations_section_title">Popular Destinations</h2>
+                    <p class="section-subtitle" data-i18n="destinations_section_subtitle">Discover the most beautiful and fascinating places in Tajikistan</p>
                 </div>
                 <div class="destinations-controls">
-                    <input type="text" id="dest-search" placeholder="Поиск по названию...">
+                    <input type="text" id="dest-search" data-i18n="[placeholder]destinations_search_placeholder" placeholder="Search by name...">
                     <select id="dest-sort">
-                        <option value="title-asc">По алфавиту (A-Z)</option>
-                        <option value="title-desc">По алфавиту (Z-A)</option>
-                        <option value="region">По региону</option>
+                        <option value="title-asc" data-i18n="destinations_sort_title_asc">Alphabetically (A-Z)</option>
+                        <option value="title-desc" data-i18n="destinations_sort_title_desc">Alphabetically (Z-A)</option>
+                        <option value="region" data-i18n="destinations_sort_region">By region</option>
                     </select>
                     <select id="dest-region-filter">
-                        <option value="">Все регионы</option>
+                        <option value="" data-i18n="destinations_region_all">All regions</option>
                         <!-- регионы будут добавляться динамически -->
                     </select>
                 </div>
@@ -153,11 +150,11 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Ready to Explore These Amazing Places?</h2>
-                    <p>Start planning your journey to discover the natural wonders and cultural treasures of Tajikistan.</p>
+                    <h2 data-i18n="destinations_cta_title">Ready to Explore These Amazing Places?</h2>
+                    <p data-i18n="destinations_cta_desc">Start planning your journey to discover the natural wonders and cultural treasures of Tajikistan.</p>
                     <div class="cta-buttons">
-                        <a href="contacts.html" class="btn btn-primary">Plan Your Trip</a>
-                        <a href="tourism-products.html" class="btn btn-secondary">View Tours</a>
+                        <a href="contacts.html" class="btn btn-primary" data-i18n="destinations_cta_plan">Plan Your Trip</a>
+                        <a href="tourism-products.html" class="btn btn-secondary" data-i18n="destinations_cta_tours">View Tours</a>
                     </div>
                 </div>
             </div>
@@ -172,27 +169,27 @@
                     <div class="footer-logo">
                         <img src="../assets/cropped-TJ_Tourism_Logo_white.png" alt="Tajikistan Tourism">
                     </div>
-                    <h3>About Tajikistan Tourism</h3>
-                    <p>Discover the natural beauty and rich cultural heritage of Tajikistan, a hidden gem in Central Asia.</p>
+                    <h3 data-i18n="footer_about_title">About Tajikistan Tourism</h3>
+                    <p data-i18n="footer_about_desc">Discover the natural beauty and rich cultural heritage of Tajikistan, a hidden gem in Central Asia.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer_links_title">Quick Links</h3>
                     <ul>
-                        <li><a href="tourism-products.html">Tourism Products</a></li>
-                        <li><a href="#">Travel Guide</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="contacts.html">Contact</a></li>
+                        <li><a href="tourism-products.html" data-i18n="footer_link_products">Tourism Products</a></li>
+                        <li><a href="#" data-i18n="footer_link_guide">Travel Guide</a></li>
+                        <li><a href="events.html" data-i18n="footer_link_events">Events</a></li>
+                        <li><a href="contacts.html" data-i18n="footer_link_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>Email: maks88821@gmai.com</p>
-                    <p>Phone: +992919667741</p>
-                    <p>Address: Dushanbe, Tajikistan</p>
+                    <h3 data-i18n="footer_contact_title">Contact Info</h3>
+                    <p data-i18n="footer_contact_email">Email: maks88821@gmai.com</p>
+                    <p data-i18n="footer_contact_phone">Phone: +992919667741</p>
+                    <p data-i18n="footer_contact_address">Address: Dushanbe, Tajikistan</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Tajikistan Tourism. All rights reserved.</p>
+                <p data-i18n="footer_copyright">&copy; 2024 Tajikistan Tourism. All rights reserved.</p>
             </div>
         </div>
     </footer>

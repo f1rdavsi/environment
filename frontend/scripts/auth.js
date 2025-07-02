@@ -1,4 +1,11 @@
 // Модуль для регистрации и логина
+import { translations } from './language.js';
+
+function getMessage(key) {
+	const lang = localStorage.getItem('lang') || 'en';
+	return translations[lang][key] || translations['en'][key];
+}
+
 export function initializeAuthForms() {
 	// --- Регистрация ---
 	const regForm = document.querySelector('.reg-form')
@@ -12,7 +19,7 @@ export function initializeAuthForms() {
 			const confirmPassword = regForm.confirmPassword.value
 			if (password !== confirmPassword) {
 				if (regMessage) {
-					regMessage.textContent = 'Пароли не совпадают!'
+					regMessage.textContent = getMessage('auth_passwords_not_match');
 					regMessage.className = 'reg-message error'
 				}
 				return
@@ -49,7 +56,7 @@ export function initializeAuthForms() {
 							localStorage.setItem('access_token', loginData.access);
 							localStorage.setItem('refresh_token', loginData.refresh);
 							if (regMessage) {
-								regMessage.textContent = 'Регистрация и вход успешны! Перенаправление на главную...';
+								regMessage.textContent = getMessage('auth_registration_login_success');
 								regMessage.className = 'reg-message success';
 							}
 							setTimeout(() => {
@@ -57,7 +64,7 @@ export function initializeAuthForms() {
 							}, 1500);
 						} else {
 							if (regMessage) {
-								regMessage.textContent = 'Регистрация успешна, но вход не выполнен. Пожалуйста, войдите вручную.';
+								regMessage.textContent = getMessage('auth_registration_success_login_failed');
 								regMessage.className = 'reg-message error';
 							}
 							setTimeout(() => {
@@ -66,7 +73,7 @@ export function initializeAuthForms() {
 						}
 					} catch (err) {
 						if (regMessage) {
-							regMessage.textContent = 'Регистрация успешна, но вход не выполнен. Пожалуйста, войдите вручную.';
+							regMessage.textContent = getMessage('auth_registration_success_login_failed');
 							regMessage.className = 'reg-message error';
 						}
 						setTimeout(() => {
@@ -76,14 +83,14 @@ export function initializeAuthForms() {
 					return;
 				} else {
 					if (regMessage) {
-						regMessage.textContent = data.error || 'Ошибка регистрации'
+						regMessage.textContent = data.error || getMessage('auth_registration_error');
 						regMessage.className = 'reg-message error'
 					}
 					regForm.querySelector('button[type="submit"]').disabled = false
 				}
 			} catch (err) {
 				if (regMessage) {
-					regMessage.textContent = 'Ошибка соединения с сервером'
+					regMessage.textContent = getMessage('auth_connection_error');
 					regMessage.className = 'reg-message error'
 				}
 				regForm.querySelector('button[type="submit"]').disabled = false
@@ -127,7 +134,7 @@ export function initializeAuthForms() {
 							localStorage.setItem('user_first_name', email.charAt(0).toUpperCase())
 						}
 						if (loginMessage) {
-							loginMessage.textContent = 'Вход выполнен! Перенаправление на главную...'
+							loginMessage.textContent = getMessage('auth_login_success');
 							loginMessage.className = 'reg-message success'
 						}
 						setTimeout(() => {
@@ -142,18 +149,42 @@ export function initializeAuthForms() {
 					return;
 				} else {
 					if (loginMessage) {
-						loginMessage.textContent = data.detail || 'Ошибка авторизации'
+						loginMessage.textContent = data.detail || getMessage('auth_authorization_error');
 						loginMessage.className = 'reg-message error'
 					}
 					loginForm.querySelector('button[type="submit"]').disabled = false
 				}
 			} catch (err) {
 				if (loginMessage) {
-					loginMessage.textContent = 'Ошибка соединения с сервером'
+					loginMessage.textContent = getMessage('auth_connection_error');
 					loginMessage.className = 'reg-message error'
 				}
 				loginForm.querySelector('button[type="submit"]').disabled = false
 			}
 		})
 	}
-} 
+}
+
+// === Глазок для показа/скрытия пароля ===
+document.addEventListener('DOMContentLoaded', function () {
+	const passwordInput = document.getElementById('password');
+	const confirmPasswordInput = document.getElementById('confirmPassword');
+	const togglePassword = document.getElementById('toggle-reg-password');
+	const toggleConfirmPassword = document.getElementById('toggle-reg-confirm-password');
+	const openEye = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+	const closedEye = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a21.81 21.81 0 0 1 5.06-6.06M9.53 9.53A3.5 3.5 0 0 1 12 8.5c2.5 0 4.5 2 4.5 4.5a3.5 3.5 0 0 1-1.03 2.47M1 1l22 22"/></svg>';
+	if (togglePassword && passwordInput) {
+		togglePassword.addEventListener('click', function () {
+			const type = passwordInput.type === 'password' ? 'text' : 'password';
+			passwordInput.type = type;
+			togglePassword.innerHTML = type === 'password' ? openEye : closedEye;
+		});
+	}
+	if (toggleConfirmPassword && confirmPasswordInput) {
+		toggleConfirmPassword.addEventListener('click', function () {
+			const type = confirmPasswordInput.type === 'password' ? 'text' : 'password';
+			confirmPasswordInput.type = type;
+			toggleConfirmPassword.innerHTML = type === 'password' ? openEye : closedEye;
+		});
+	}
+}); 

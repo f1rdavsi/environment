@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Tajikistan Tourism</title>
+    <title data-i18n="login_page_title">Login - Tajikistan Tourism</title>
+    <link rel="icon" type="image/x-icon" href="../assets/cropped-TJ_Tourism_Logo_white.png">
+    <link rel="stylesheet" href="../styles/stylehome.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/auth.css">
 </head>
 <body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="lang-btn" id="langBtn">
+            <span class="flag">en</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 10l5 5 5-5z"/>
+            </svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+            <div class="lang-option" data-lang="en" data-flag="en">
+                <span class="flag">en</span>
+                <span>English</span>
+            </div>
+            <div class="lang-option" data-lang="ko" data-flag="ko">
+                <span class="flag">ko</span>
+                <span>Korean</span>
+            </div>
+        </div>
+    </div>
+
     <div class="login-wrapper">
         <div class="login-logo">
             <a href="index.html">
@@ -16,27 +38,29 @@
                 </div>
             </a>
         </div>
-        <div class="login-title">Sign In</div>
-        <div class="login-desc">Welcome back! Please sign in to your account</div>
+        <div class="login-title" data-i18n="login_sign_in">Sign In</div>
+        <div class="login-desc" data-i18n="login_welcome">Welcome back! Please sign in to your account</div>
         <div id="login-message" class="reg-message"></div>
         <form class="login-form">
             <div class="login-group">
-                <label for="email">Email Address</label>
+                <label for="email" data-i18n="login_email">Email Address</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="login-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <label for="password" data-i18n="login_password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" required>
+                </div>
             </div>
             <div class="login-checkbox">
                 <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Remember me</label>
+                <label for="remember" data-i18n="login_remember">Remember me</label>
             </div>
-            <button type="submit" class="login-btn">Sign In</button>
+            <button type="submit" class="login-btn" data-i18n="login_sign_in">Sign In</button>
         </form>
         <div class="login-footer">
-            Don't have an account? <a href="registration.html">Sign Up</a><br>
-            <a href="#" class="forgot-password">Forgot Password?</a>
+            <span data-i18n="login_no_account">Don't have an account?</span> <a href="registration.html" data-i18n="login_sign_up">Sign Up</a><br>
+            <a href="#" class="forgot-password" data-i18n="login_forgot_password">Forgot Password?</a>
         </div>
     </div>
     <script type="module" src="../scripts/main.js"></script>

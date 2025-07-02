@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Tajikistan</title>
+    <title data-i18n="contacts_page_title">Contact Us - Tajikistan</title>
+    <link rel="icon" type="image/x-icon" href="../assets/cropped-TJ_Tourism_Logo_white.png">
     <link rel="stylesheet" href="../styles/stylehome.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/contacts.css">
@@ -30,12 +31,12 @@
 
                 <!-- Desktop Menu -->
                 <div class="nav-menu">
-                    <a href="index.html" class="nav-link">HOME</a>
-                    <a href="tourism-products.html" class="nav-link">TOURISM PRODUCTS</a>
-                    <a href="destinations.html" class="nav-link">DESTINATIONS</a>
-                    <a href="events.html" class="nav-link">EVENTS</a>
-                    <a href="information.html" class="nav-link">INFORMATION</a>
-                    <a href="contacts.html" class="nav-link">CONTACTS</a>
+                    <a href="index.html" class="nav-link" data-i18n="nav_home">HOME</a>
+                    <a href="tourism-products.html" class="nav-link" data-i18n="nav_products">TOURISM PRODUCTS</a>
+                    <a href="destinations.html" class="nav-link" data-i18n="nav_destinations">DESTINATIONS</a>
+                    <a href="events.html" class="nav-link" data-i18n="nav_events">EVENTS</a>
+                    <a href="information.html" class="nav-link" data-i18n="nav_info">INFORMATION</a>
+                    <a href="contacts.html" class="nav-link" data-i18n="nav_contacts">CONTACTS</a>
                 </div>
 
                 <!-- Right Controls -->
@@ -50,17 +51,13 @@
                             </svg>
                         </button>
                         <div class="lang-dropdown" id="langDropdown">
-                            <div class="lang-option" data-lang="en" data-flag="🇬🇧">
+                            <div class="lang-option" data-lang="en" data-flag="en">
                                 <span class="flag">en</span>
                                 <span>English</span>
                             </div>
-                            <div class="lang-option" data-lang="ru" data-flag="🇷🇺">
-                                <span class="flag">ru</span>
-                                <span>Русский</span>
-                            </div>
-                            <div class="lang-option" data-lang="tj" data-flag="🇹🇯">
-                                <span class="flag">tj</span>
-                                <span>Тоҷикӣ</span>
+                            <div class="lang-option" data-lang="ko" data-flag="ko">
+                                <span class="flag">ko</span>
+                                <span>한국어</span>
                             </div>
                         </div>
                     </div>
@@ -99,21 +96,21 @@
 
             <!-- Mobile Menu -->
             <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html" class="mobile-nav-link">HOME</a>
-                <a href="tourism-products.html" class="mobile-nav-link">TOURISM PRODUCTS</a>
-                <a href="destinations.html" class="mobile-nav-link">DESTINATIONS</a>
-                <a href="events.html" class="mobile-nav-link">EVENTS</a>
-                <a href="information.html" class="mobile-nav-link">INFORMATION</a>
-                <a href="contacts.html" class="mobile-nav-link">CONTACTS</a>
+                <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">HOME</a>
+                <a href="tourism-products.html" class="mobile-nav-link" data-i18n="nav_products">TOURISM PRODUCTS</a>
+                <a href="destinations.html" class="mobile-nav-link" data-i18n="nav_destinations">DESTINATIONS</a>
+                <a href="events.html" class="mobile-nav-link" data-i18n="nav_events">EVENTS</a>
+                <a href="information.html" class="mobile-nav-link" data-i18n="nav_info">INFORMATION</a>
+                <a href="contacts.html" class="mobile-nav-link" data-i18n="nav_contacts">CONTACTS</a>
             </div>
         </nav>
 
         <!-- Hero Content -->
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">CONTACT US</h1>
-                <h2 class="hero-subtitle">GET IN</h2>
-                <h3 class="hero-description" id="heroDescription">TOUCH</h3>
+                <h1 class="hero-title" data-i18n="contacts_hero_title">CONTACT US</h1>
+                <h2 class="hero-subtitle" data-i18n="contacts_hero_subtitle">GET IN</h2>
+                <h3 class="hero-description" id="heroDescription" data-i18n="contacts_hero_description">TOUCH</h3>
             </div>
         </div>
 
@@ -131,80 +128,89 @@
         <section class="contact-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Get in Touch</h2>
-                    <p class="section-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    <h2 class="section-title" data-i18n="contacts_get_touch">Get in Touch</h2>
+                    <p class="section-subtitle" data-i18n="contacts_subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
                 </div>
                 
                 <div class="contact-grid">
                     <!-- Contact Information -->
                     <div class="contact-info">
-                        <h3>Contact Information</h3>
+                        <h3 data-i18n="contacts_info_title">Contact Information</h3>
                         <div class="contact-item">
                             <div class="contact-icon">📍</div>
                             <div>
-                                <h4>Address</h4>
-                                <p>123 Tourism Street<br>Dushanbe, Tajikistan 734000</p>
+                                <h4 data-i18n="contacts_address">Address</h4>
+                                <p data-i18n="contacts_address_text">123 Tourism Street<br>Dushanbe, Tajikistan 734000</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">📞</div>
                             <div>
-                                <h4>Phone</h4>
-                                <p>+992 48 123 4567<br>+992 48 123 4568</p>
+                                <h4 data-i18n="contacts_phone">Phone</h4>
+                                <p data-i18n="contacts_phone_text">+992 48 123 4567<br>+992 48 123 4568</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">✉️</div>
                             <div>
-                                <h4>Email</h4>
-                                <p>info@tajikistan-tourism.com<br>support@tajikistan-tourism.com</p>
+                                <h4 data-i18n="contacts_email">Email</h4>
+                                <p data-i18n="contacts_email_text">info@tajikistan-tourism.com<br>support@tajikistan-tourism.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">🕒</div>
                             <div>
-                                <h4>Working Hours</h4>
-                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                                <h4 data-i18n="contacts_hours">Working Hours</h4>
+                                <p data-i18n="contacts_hours_text">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Contact Form -->
                     <div class="contact-form">
-                        <h3>Send us a Message</h3>
+                        <h3 data-i18n="contacts_form_title">Send us a Message</h3>
                         <form>
                             <div class="form-group">
-                                <label for="name">Full Name *</label>
+                                <label for="name" data-i18n="contacts_form_name">Full Name *</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email Address *</label>
+                                <label for="email" data-i18n="contacts_form_email">Email Address *</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Phone Number</label>
+                                <label for="phone" data-i18n="contacts_form_phone">Phone Number</label>
                                 <input type="text" id="phone" name="phone">
                             </div>
                             <div class="form-group">
-                                <label for="subject">Subject *</label>
+                                <label for="subject" data-i18n="contacts_form_subject">Subject *</label>
                                 <select id="subject" name="subject" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="booking">Tour Booking</option>
-                                    <option value="support">Customer Support</option>
-                                    <option value="partnership">Partnership</option>
-                                    <option value="other">Other</option>
+                                    <option value="" data-i18n="contacts_form_select_subject">Select a subject</option>
+                                    <option value="general" data-i18n="contacts_form_general">General Inquiry</option>
+                                    <option value="booking" data-i18n="contacts_form_booking">Tour Booking</option>
+                                    <option value="support" data-i18n="contacts_form_support">Customer Support</option>
+                                    <option value="partnership" data-i18n="contacts_form_partnership">Partnership</option>
+                                    <option value="other" data-i18n="contacts_form_other">Other</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="message">Message *</label>
+                                <label for="message" data-i18n="contacts_form_message">Message *</label>
                                 <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="submit" class="btn btn-primary" data-i18n="contacts_form_send">Send Message</button>
                         </form>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="contacts_find_us">Find Us</h2>
+                    <p class="section-subtitle" data-i18n="contacts_map_subtitle">Visit our office in the heart of Dushanbe</p>
+                </div>
                 <div class="map-container">
                     <div class="contacts-map-container" style="margin: 2rem 0;">
                         <iframe
@@ -220,25 +226,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Map Section -->
-        <section class="map-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Find Us</h2>
-                    <p class="section-subtitle">Visit our office in the heart of Dushanbe</p>
-                </div>
-                <div class="map-container">
-                    <div class="map-placeholder">
-                        <div class="map-content">
-                            <h3>📍 Our Location</h3>
-                            <p>123 Tourism Street, Dushanbe, Tajikistan</p>
-                            <p>We're located in the central business district, easily accessible by public transport.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -249,27 +236,27 @@
                     <div class="footer-logo">
                         <img src="../assets/cropped-TJ_Tourism_Logo_white.png" alt="Tajikistan Tourism">
                     </div>
-                    <h3>About Tajikistan Tourism</h3>
-                    <p>Discover the natural beauty and rich cultural heritage of Tajikistan, a hidden gem in Central Asia.</p>
+                    <h3 data-i18n="footer_about_title">About Tajikistan Tourism</h3>
+                    <p data-i18n="footer_about_desc">Discover the natural beauty and rich cultural heritage of Tajikistan, a hidden gem in Central Asia.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer_links_title">Quick Links</h3>
                     <ul>
-                        <li><a href="tourism-products.html">Tourism Products</a></li>
-                        <li><a href="#">Travel Guide</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="contacts.html">Contact</a></li>
+                        <li><a href="tourism-products.html" data-i18n="footer_link_products">Tourism Products</a></li>
+                        <li><a href="#" data-i18n="footer_link_guide">Travel Guide</a></li>
+                        <li><a href="#" data-i18n="footer_link_events">Events</a></li>
+                        <li><a href="contacts.html" data-i18n="footer_link_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>Email: maks88821@gmai.com</p>
-                    <p>Phone: +992919667741</p>
-                    <p>Address: Dushanbe, Tajikistan</p>
+                    <h3 data-i18n="footer_contact_title">Contact Info</h3>
+                    <p data-i18n="footer_contact_email">Email: maks88821@gmai.com</p>
+                    <p data-i18n="footer_contact_phone">Phone: +992919667741</p>
+                    <p data-i18n="footer_contact_address">Address: Dushanbe, Tajikistan</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Tajikistan Tourism. All rights reserved.</p>
+                <p data-i18n="footer_copyright">&copy; 2024 Tajikistan Tourism. All rights reserved.</p>
             </div>
         </div>
     </footer>

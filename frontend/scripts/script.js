@@ -1,3 +1,5 @@
+import { translations, initializeLanguageSelector, setLanguage } from './language.js';
+
 // Не показывать прелоадер на registration и login
 if (
 	window.location.pathname.includes('registration.html') ||
@@ -21,24 +23,11 @@ if (
 	}
 }
 
-// Hero content data
-const heroContent = [
-	{
-		title: 'TAJIKISTAN',
-		subtitle: 'LAND OF',
-		description: 'ANCIENT CULTURES',
-	},
-	{
-		title: 'TAJIKISTAN',
-		subtitle: 'LAND OF',
-		description: 'MAJESTIC MOUNTAINS',
-	},
-	{
-		title: 'TAJIKISTAN',
-		subtitle: 'LAND OF',
-		description: 'TIMELESS TRADITIONS',
-	},
-]
+// Инициализируем heroContent с текущим языком
+let heroContent = translations[localStorage.getItem('lang') || 'en'].hero_slider;
+
+// Делаем переменные глобально доступными
+window.heroContent = heroContent;
 
 let currentSlide = 0
 let slideInterval
@@ -48,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	renderUserMenu();
 	initializeSlider();
 	initializeLanguageSelector();
+	
+	// Устанавливаем язык и переводим контент
+	const savedLang = localStorage.getItem('lang') || 'en';
+	setLanguage(savedLang);
+	
 	initializeThemeToggle();
 	initializeMobileMenu();
 	initializeScrollAnimations();
@@ -218,7 +212,11 @@ document.addEventListener('DOMContentLoaded', function () {
 function initializeSlider() {
 	const slides = document.querySelectorAll('.bg-slide')
 	const indicators = document.querySelectorAll('.indicator')
+	const heroTitle = document.getElementById('heroTitle')
+	const heroSubtitle = document.getElementById('heroSubtitle')
 	const heroDescription = document.getElementById('heroDescription')
+
+	if (slides.length === 0) return;
 
 	function showSlide(index) {
 		// Update background
@@ -232,21 +230,46 @@ function initializeSlider() {
 		})
 
 		// Update hero text with animation
-		if (!heroDescription) return;
-		heroDescription.style.opacity = '0'
-		heroDescription.style.transform = 'translateY(20px)'
+		if (heroTitle && window.heroContent[index]) {
+			heroTitle.style.opacity = '0'
+			heroTitle.style.transform = 'translateY(20px)'
+			setTimeout(() => {
+				heroTitle.textContent = window.heroContent[index].title
+				heroTitle.style.opacity = '1'
+				heroTitle.style.transform = 'translateY(0)'
+			}, 200)
+		}
 
-		setTimeout(() => {
-			heroDescription.textContent = heroContent[index].description
-			heroDescription.style.opacity = '1'
-			heroDescription.style.transform = 'translateY(0)'
-		}, 400)
+		if (heroSubtitle && window.heroContent[index]) {
+			heroSubtitle.style.opacity = '0'
+			heroSubtitle.style.transform = 'translateY(20px)'
+			setTimeout(() => {
+				heroSubtitle.textContent = window.heroContent[index].subtitle
+				heroSubtitle.style.opacity = '1'
+				heroSubtitle.style.transform = 'translateY(0)'
+			}, 300)
+		}
+
+		if (heroDescription && window.heroContent[index]) {
+			heroDescription.style.opacity = '0'
+			heroDescription.style.transform = 'translateY(20px)'
+			setTimeout(() => {
+				heroDescription.textContent = window.heroContent[index].description
+				heroDescription.style.opacity = '1'
+				heroDescription.style.transform = 'translateY(0)'
+			}, 400)
+		}
 
 		currentSlide = index
+		// Делаем переменные глобально доступными
+		window.currentSlide = currentSlide;
 	}
+	
+	// Делаем функцию глобально доступной
+	window.showHeroSlide = showSlide;
 
 	function nextSlide() {
-		const nextIndex = (currentSlide + 1) % heroContent.length
+		const nextIndex = (currentSlide + 1) % window.heroContent.length
 		showSlide(nextIndex)
 	}
 
@@ -264,15 +287,7 @@ function initializeSlider() {
 }
 
 // Language selector
-function initializeLanguageSelector() {
-	const selector = document.getElementById('language-selector');
-	if (!selector) return;
-	selector.addEventListener('change', function () {
-		const flag = this.value;
-		const flagSpan = document.getElementById('langBtn').querySelector('.flag');
-		flagSpan.textContent = flag;
-	});
-}
+// Удалена старая функция initializeLanguageSelector - теперь используется новая из language.js
 
 // Theme toggle
 function initializeThemeToggle() {
@@ -280,6 +295,8 @@ function initializeThemeToggle() {
 	const currentTheme = localStorage.getItem('theme') || 'light'
 
 	document.documentElement.setAttribute('data-theme', currentTheme)
+
+	if (!themeToggle) return;
 
 	themeToggle.addEventListener('click', (e) => {
 		const currentTheme = document.documentElement.getAttribute('data-theme')
@@ -315,6 +332,8 @@ function initializeMobileMenu() {
 	const mobileMenuToggle = document.getElementById('mobileMenuToggle')
 	const mobileMenu = document.getElementById('mobileMenu')
 
+	if (!mobileMenuToggle || !mobileMenu) return;
+
 	mobileMenuToggle.addEventListener('click', () => {
 		mobileMenuToggle.classList.toggle('active')
 		mobileMenu.classList.toggle('show')
@@ -333,6 +352,8 @@ function initializeMobileMenu() {
 // Scroll animations
 function initializeScrollAnimations() {
 	const patterns = document.querySelectorAll('.pattern')
+	if (patterns.length === 0) return;
+	
 	let isScrolling = false
 	let scrollTimeout
 
@@ -357,6 +378,8 @@ function initializeScrollAnimations() {
 // Pattern hover animations
 function initializePatternAnimations() {
 	const patterns = document.querySelectorAll('.pattern')
+	
+	if (patterns.length === 0) return;
 
 	patterns.forEach(pattern => {
 		let hoverTimeout
@@ -393,28 +416,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Intersection Observer for animations
 const observerOptions = {
 	threshold: 0.1,
-	rootMargin: '0px 0px -50px 0px',
+	rootMargin: '0px 0px -50px 0px'
 }
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
-			entry.target.style.animationPlayState = 'running'
+			entry.target.classList.add('animate-in')
 		}
 	})
 }, observerOptions)
 
-// Observe hero elements
-document
-	.querySelectorAll('.hero-title, .hero-subtitle, .hero-description')
-	.forEach(el => {
-		observer.observe(el)
-	})
+// Observe all elements with animation classes
+document.addEventListener('DOMContentLoaded', () => {
+	const animatedElements = document.querySelectorAll('.fade-in, .slide-in, .scale-in')
+	animatedElements.forEach(el => observer.observe(el))
+})
 
 // Загрузка туристических продуктов с API и рендеринг карточек
 function loadTourismProducts() {
 	const grid = document.getElementById('productsGrid')
-	if (!grid) return
+	if (!grid) return;
 	fetch('http://localhost:8000/api/tourism-products/')
 		.then(response => response.json())
 		.then(products => {
@@ -451,13 +473,9 @@ function getUserInitial() {
 }
 
 function renderUserMenu(attempt = 1) {
-	console.log('renderUserMenu called, attempt', attempt);
 	const container = document.getElementById('user-menu-container')
-	console.log('user-menu-container:', container);
 	const registrationBtn = document.querySelector('.registration-btn');
-	console.log('registrationBtn:', registrationBtn);
 	if (!container) {
-		console.warn('user-menu-container не найден!');
 		if (attempt < 3) {
 			setTimeout(() => renderUserMenu(attempt + 1), 100);
 		}
@@ -466,17 +484,12 @@ function renderUserMenu(attempt = 1) {
 
 	const accessToken = localStorage.getItem('access_token')
 	const userName = localStorage.getItem('user_first_name')
-	console.log('access_token:', accessToken);
-	console.log('user_first_name:', userName);
-	// Если нет токена, перенаправляем на регистрацию
 	if (!accessToken) {
-		console.log('Нет access_token, показываем кнопку регистрации и редиректим.');
 		if (registrationBtn) registrationBtn.style.display = '';
 		window.location.href = 'registration.html';
 		return;
 	}
 	if (accessToken && userName) {
-		console.log('Пользователь залогинен, скрываем кнопку регистрации и показываем аватар.');
 		if (registrationBtn) registrationBtn.style.display = 'none';
 		container.innerHTML = `
 			<div class="user-avatar" id="user-avatar">${getUserInitial()}</div>
@@ -503,7 +516,6 @@ function renderUserMenu(attempt = 1) {
 			}
 		})
 	} else {
-		console.log('Пользователь не залогинен, показываем SVG-аватар и кнопку регистрации.');
 		if (registrationBtn) registrationBtn.style.display = '';
 		container.innerHTML = `
 			<div class="user-avatar" id="user-avatar">
@@ -658,3 +670,5 @@ window.addEventListener('load', function() {
 		}
 	}
 });
+
+

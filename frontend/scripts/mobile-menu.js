@@ -3,6 +3,8 @@ export function initializeMobileMenu() {
 	const mobileMenuToggle = document.getElementById('mobileMenuToggle')
 	const mobileMenu = document.getElementById('mobileMenu')
 
+	if (!mobileMenuToggle || !mobileMenu) return;
+
 	mobileMenuToggle.addEventListener('click', () => {
 		mobileMenuToggle.classList.toggle('active')
 		mobileMenu.classList.toggle('show')

@@ -16,16 +16,20 @@ export function renderUserMenu(attempt = 1) {
 
 	const accessToken = localStorage.getItem('access_token')
 	const userName = localStorage.getItem('user_first_name')
-	console.log('access_token:', accessToken);
-	console.log('user_first_name:', userName);
+	
 	if (!accessToken) {
-		console.log('Нет access_token, показываем кнопку регистрации и редиректим.');
-		if (registrationBtn) registrationBtn.style.display = '';
-		window.location.href = 'registration.html';
+		// Не делаем редирект на страницах логина/регистрации
+		const currentPage = window.location.pathname;
+		if (!currentPage.includes('login.html') && !currentPage.includes('registration.html')) {
+			if (registrationBtn) registrationBtn.style.display = '';
+			window.location.href = 'registration.html';
+		} else {
+			if (registrationBtn) registrationBtn.style.display = 'none';
+		}
 		return;
 	}
+	
 	if (accessToken && userName) {
-		console.log('Пользователь залогинен, скрываем кнопку регистрации и показываем аватар.');
 		if (registrationBtn) registrationBtn.style.display = 'none';
 		container.innerHTML = `
 			<div class="user-avatar" id="user-avatar">${getUserInitial()}</div>
@@ -52,7 +56,6 @@ export function renderUserMenu(attempt = 1) {
 			}
 		})
 	} else {
-		console.log('Пользователь не залогинен, показываем SVG-аватар и кнопку регистрации.');
 		if (registrationBtn) registrationBtn.style.display = '';
 		container.innerHTML = `
 			<div class="user-avatar" id="user-avatar">

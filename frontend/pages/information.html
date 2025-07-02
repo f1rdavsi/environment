@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information - Tajikistan</title>
+    <title data-i18n="information_page_title">Information - Tajikistan</title>
+    <link rel="icon" type="image/x-icon" href="../assets/cropped-TJ_Tourism_Logo_white.png">
     <link rel="stylesheet" href="../styles/stylehome.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/information.css">
@@ -30,12 +31,12 @@
 
                 <!-- Desktop Menu -->
                 <div class="nav-menu">
-                    <a href="index.html" class="nav-link">HOME</a>
-                    <a href="tourism-products.html" class="nav-link">TOURISM PRODUCTS</a>
-                    <a href="destinations.html" class="nav-link">DESTINATIONS</a>
-                    <a href="events.html" class="nav-link">EVENTS</a>
-                    <a href="information.html" class="nav-link">INFORMATION</a>
-                    <a href="contacts.html" class="nav-link">CONTACTS</a>
+                    <a href="index.html" class="nav-link" data-i18n="nav_home">HOME</a>
+                    <a href="tourism-products.html" class="nav-link" data-i18n="nav_products">TOURISM PRODUCTS</a>
+                    <a href="destinations.html" class="nav-link" data-i18n="nav_destinations">DESTINATIONS</a>
+                    <a href="events.html" class="nav-link" data-i18n="nav_events">EVENTS</a>
+                    <a href="information.html" class="nav-link" data-i18n="nav_info">INFORMATION</a>
+                    <a href="contacts.html" class="nav-link" data-i18n="nav_contacts">CONTACTS</a>
                 </div>
 
                 <!-- Right Controls -->
@@ -50,17 +51,13 @@
                             </svg>
                         </button>
                         <div class="lang-dropdown" id="langDropdown">
-                            <div class="lang-option" data-lang="en" data-flag="🇬🇧">
+                            <div class="lang-option" data-lang="en" data-flag="en">
                                 <span class="flag">en</span>
                                 <span>English</span>
                             </div>
-                            <div class="lang-option" data-lang="ru" data-flag="🇷🇺">
-                                <span class="flag">ru</span>
-                                <span>Русский</span>
-                            </div>
-                            <div class="lang-option" data-lang="tj" data-flag="🇹🇯">
-                                <span class="flag">tj</span>
-                                <span>Тоҷикӣ</span>
+                            <div class="lang-option" data-lang="ko" data-flag="ko">
+                                <span class="flag">ko</span>
+                                <span>한국어</span>
                             </div>
                         </div>
                     </div>
@@ -99,20 +96,20 @@
 
             <!-- Mobile Menu -->
             <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html" class="mobile-nav-link">HOME</a>
-                <a href="tourism-products.html" class="mobile-nav-link">TOURISM PRODUCTS</a>
-                <a href="destinations.html" class="mobile-nav-link">DESTINATIONS</a>
-                <a href="events.html" class="mobile-nav-link">EVENTS</a>
-                <a href="information.html" class="mobile-nav-link">INFORMATION</a>
-                <a href="contacts.html" class="mobile-nav-link">CONTACTS</a>
+                <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">HOME</a>
+                <a href="tourism-products.html" class="mobile-nav-link" data-i18n="nav_products">TOURISM PRODUCTS</a>
+                <a href="destinations.html" class="mobile-nav-link" data-i18n="nav_destinations">DESTINATIONS</a>
+                <a href="events.html" class="mobile-nav-link" data-i18n="nav_events">EVENTS</a>
+                <a href="information.html" class="mobile-nav-link" data-i18n="nav_info">INFORMATION</a>
+                <a href="contacts.html" class="mobile-nav-link" data-i18n="nav_contacts">CONTACTS</a>
             </div>
         </nav>
 
         <!-- Hero Content -->
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">INFORMATION</h1>
-                <h2 class="hero-subtitle">ESSENTIAL</h2>
+                <h1 class="hero-title" id="heroTitle">INFORMATION</h1>
+                <h2 class="hero-subtitle" id="heroSubtitle">ESSENTIAL</h2>
                 <h3 class="hero-description" id="heroDescription">TRAVEL GUIDE</h3>
             </div>
         </div>
@@ -131,87 +128,87 @@
         <section class="information-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Travel Information</h2>
-                    <p class="section-subtitle">Everything you need to know before visiting Tajikistan</p>
+                    <h2 class="section-title" data-i18n="information_section_title">Travel Information</h2>
+                    <p class="section-subtitle" data-i18n="information_section_subtitle">Everything you need to know before visiting Tajikistan</p>
                 </div>
                 
                 <div class="info-grid">
                     <div class="info-card">
                         <div class="info-icon">🛂</div>
-                        <h3>Visa Requirements</h3>
-                        <p>Most visitors need a visa to enter Tajikistan. E-visas are available for many nationalities.</p>
+                        <h3 data-i18n="information_visa_title">Visa Requirements</h3>
+                        <p data-i18n="information_visa_desc">Most visitors need a visa to enter Tajikistan. E-visas are available for many nationalities.</p>
                         <ul>
-                            <li>E-visa available for 60+ countries</li>
-                            <li>Processing time: 3-5 business days</li>
-                            <li>Valid for 45 days</li>
-                            <li>Cost: $25-50 USD</li>
+                            <li data-i18n="information_visa_evisa">E-visa available for 60+ countries</li>
+                            <li data-i18n="information_visa_processing">Processing time: 3-5 business days</li>
+                            <li data-i18n="information_visa_valid">Valid for 45 days</li>
+                            <li data-i18n="information_visa_cost">Cost: $25-50 USD</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Apply for Visa</a>
+                        <a href="#" class="btn btn-primary" data-i18n="information_visa_apply">Apply for Visa</a>
                     </div>
 
                     <div class="info-card">
                         <div class="info-icon">🌡️</div>
-                        <h3>Weather & Climate</h3>
-                        <p>Tajikistan has a continental climate with hot summers and cold winters.</p>
+                        <h3 data-i18n="information_weather_title">Weather & Climate</h3>
+                        <p data-i18n="information_weather_desc">Tajikistan has a continental climate with hot summers and cold winters.</p>
                         <ul>
-                            <li>Spring (Mar-May): 10-25°C</li>
-                            <li>Summer (Jun-Aug): 20-35°C</li>
-                            <li>Autumn (Sep-Nov): 10-25°C</li>
-                            <li>Winter (Dec-Feb): -5-10°C</li>
+                            <li data-i18n="information_weather_spring">Spring (Mar-May): 10-25°C</li>
+                            <li data-i18n="information_weather_summer">Summer (Jun-Aug): 20-35°C</li>
+                            <li data-i18n="information_weather_autumn">Autumn (Sep-Nov): 10-25°C</li>
+                            <li data-i18n="information_weather_winter">Winter (Dec-Feb): -5-10°C</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Check Weather</a>
+                        <a href="#" class="btn btn-primary" data-i18n="information_weather_check">Check Weather</a>
                     </div>
 
                     <div class="info-card">
                         <div class="info-icon">💰</div>
-                        <h3>Currency & Money</h3>
-                        <p>The official currency is the Tajikistani Somoni (TJS).</p>
+                        <h3 data-i18n="information_currency_title">Currency & Money</h3>
+                        <p data-i18n="information_currency_desc">The official currency is the Tajikistani Somoni (TJS).</p>
                         <ul>
-                            <li>1 USD ≈ 10.5 TJS</li>
-                            <li>Credit cards accepted in major cities</li>
-                            <li>ATMs available in Dushanbe</li>
-                            <li>Cash preferred in rural areas</li>
+                            <li data-i18n="information_currency_rate">1 USD ≈ 10.5 TJS</li>
+                            <li data-i18n="information_currency_cards">Credit cards accepted in major cities</li>
+                            <li data-i18n="information_currency_atms">ATMs available in Dushanbe</li>
+                            <li data-i18n="information_currency_cash">Cash preferred in rural areas</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Currency Converter</a>
+                        <a href="#" class="btn btn-primary" data-i18n="information_currency_converter">Currency Converter</a>
                     </div>
 
                     <div class="info-card">
                         <div class="info-icon">🚗</div>
-                        <h3>Transportation</h3>
-                        <p>Getting around Tajikistan requires planning, especially in remote areas.</p>
+                        <h3 data-i18n="information_transport_title">Transportation</h3>
+                        <p data-i18n="information_transport_desc">Getting around Tajikistan requires planning, especially in remote areas.</p>
                         <ul>
-                            <li>Shared taxis between cities</li>
-                            <li>Domestic flights available</li>
-                            <li>Public transport in Dushanbe</li>
-                            <li>4x4 recommended for mountains</li>
+                            <li data-i18n="information_transport_taxis">Shared taxis between cities</li>
+                            <li data-i18n="information_transport_flights">Domestic flights available</li>
+                            <li data-i18n="information_transport_public">Public transport in Dushanbe</li>
+                            <li data-i18n="information_transport_4x4">4x4 recommended for mountains</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Transport Guide</a>
+                        <a href="#" class="btn btn-primary" data-i18n="information_transport_guide">Transport Guide</a>
                     </div>
 
                     <div class="info-card">
                         <div class="info-icon">🏨</div>
-                        <h3>Accommodation</h3>
-                        <p>From luxury hotels to homestays, Tajikistan offers various accommodation options.</p>
+                        <h3 data-i18n="information_accommodation_title">Accommodation</h3>
+                        <p data-i18n="information_accommodation_desc">From luxury hotels to homestays, Tajikistan offers various accommodation options.</p>
                         <ul>
-                            <li>Hotels in major cities</li>
-                            <li>Guesthouses in rural areas</li>
-                            <li>Homestays with locals</li>
-                            <li>Camping in mountains</li>
+                            <li data-i18n="information_accommodation_hotels">Hotels in major cities</li>
+                            <li data-i18n="information_accommodation_guesthouses">Guesthouses in rural areas</li>
+                            <li data-i18n="information_accommodation_homestays">Homestays with locals</li>
+                            <li data-i18n="information_accommodation_camping">Camping in mountains</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Book Accommodation</a>
+                        <a href="#" class="btn btn-primary" data-i18n="information_accommodation_book">Book Accommodation</a>
                     </div>
 
                     <div class="info-card">
                         <div class="info-icon">🍽️</div>
-                        <h3>Food & Cuisine</h3>
-                        <p>Tajik cuisine features hearty dishes with rice, meat, and fresh vegetables.</p>
+                        <h3 data-i18n="information_food_title">Food & Cuisine</h3>
+                        <p data-i18n="information_food_desc">Tajik cuisine features hearty dishes with rice, meat, and fresh vegetables.</p>
                         <ul>
-                            <li>Plov (rice with meat)</li>
-                            <li>Qurutob (bread with yogurt)</li>
-                            <li>Shashlik (grilled meat)</li>
-                            <li>Fresh fruits and nuts</li>
+                            <li data-i18n="information_food_plov">Plov (rice with meat)</li>
+                            <li data-i18n="information_food_qurutob">Qurutob (bread with yogurt)</li>
+                            <li data-i18n="information_food_shashlik">Shashlik (grilled meat)</li>
+                            <li data-i18n="information_food_fruits">Fresh fruits and nuts</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Food Guide</a>
+                        <a href="#" class="btn btn-primary" data-i18n="information_food_guide">Food Guide</a>
                     </div>
                 </div>
             </div>
@@ -221,28 +218,28 @@
         <section class="safety-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Safety & Health</h2>
-                    <p class="section-subtitle">Important information for a safe and healthy trip</p>
+                    <h2 class="section-title" data-i18n="information_safety_title">Safety & Health</h2>
+                    <p class="section-subtitle" data-i18n="information_safety_subtitle">Important information for a safe and healthy trip</p>
                 </div>
                 
                 <div class="safety-grid">
                     <div class="safety-card">
-                        <h3>Health Information</h3>
+                        <h3 data-i18n="information_health_title">Health Information</h3>
                         <ul>
-                            <li>No special vaccinations required</li>
-                            <li>Drink bottled or boiled water</li>
-                            <li>Medical facilities limited in rural areas</li>
-                            <li>Travel insurance recommended</li>
+                            <li data-i18n="information_health_vaccinations">No special vaccinations required</li>
+                            <li data-i18n="information_health_water">Drink bottled or boiled water</li>
+                            <li data-i18n="information_health_medical">Medical facilities limited in rural areas</li>
+                            <li data-i18n="information_health_insurance">Travel insurance recommended</li>
                         </ul>
                     </div>
                     
                     <div class="safety-card">
-                        <h3>Safety Tips</h3>
+                        <h3 data-i18n="information_safety_tips_title">Safety Tips</h3>
                         <ul>
-                            <li>Register with your embassy</li>
-                            <li>Respect local customs and dress modestly</li>
-                            <li>Be cautious in mountain areas</li>
-                            <li>Keep copies of important documents</li>
+                            <li data-i18n="information_safety_embassy">Register with your embassy</li>
+                            <li data-i18n="information_safety_customs">Respect local customs and dress modestly</li>
+                            <li data-i18n="information_safety_mountains">Be cautious in mountain areas</li>
+                            <li data-i18n="information_safety_documents">Keep copies of important documents</li>
                         </ul>
                     </div>
                 </div>
@@ -253,11 +250,11 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Ready to Plan Your Trip?</h2>
-                    <p>Contact our travel experts for personalized advice and assistance.</p>
+                    <h2 data-i18n="information_cta_title">Ready to Plan Your Trip?</h2>
+                    <p data-i18n="information_cta_desc">Contact our travel experts for personalized advice and assistance.</p>
                     <div class="cta-buttons">
-                        <a href="contacts.html" class="btn btn-primary">Contact Us</a>
-                        <a href="tourism-products.html" class="btn btn-secondary">View Tours</a>
+                        <a href="contacts.html" class="btn btn-primary" data-i18n="information_cta_contact">Contact Us</a>
+                        <a href="tourism-products.html" class="btn btn-secondary" data-i18n="information_cta_tours">View Tours</a>
                     </div>
                 </div>
             </div>
@@ -272,27 +269,27 @@
                     <div class="footer-logo">
                         <img src="../assets/cropped-TJ_Tourism_Logo_white.png" alt="Tajikistan Tourism">
                     </div>
-                    <h3>About Tajikistan Tourism</h3>
-                    <p>Discover the natural beauty and rich cultural heritage of Tajikistan, a hidden gem in Central Asia.</p>
+                    <h3 data-i18n="footer_about_title">About Tajikistan Tourism</h3>
+                    <p data-i18n="footer_about_desc">Discover the natural beauty and rich cultural heritage of Tajikistan, a hidden gem in Central Asia.</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer_links_title">Quick Links</h3>
                     <ul>
-                        <li><a href="tourism-products.html">Tourism Products</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="contacts.html">Contact</a></li>
+                        <li><a href="tourism-products.html" data-i18n="footer_link_products">Tourism Products</a></li>
+                        <li><a href="destinations.html" data-i18n="nav_destinations">Destinations</a></li>
+                        <li><a href="events.html" data-i18n="nav_events">Events</a></li>
+                        <li><a href="contacts.html" data-i18n="footer_link_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>Email: maks88821@gmai.com</p>
-                    <p>Phone: +992919667741</p>
-                    <p>Address: Dushanbe, Tajikistan</p>
+                    <h3 data-i18n="footer_contact_title">Contact Info</h3>
+                    <p data-i18n="footer_contact_email">Email: maks88821@gmai.com</p>
+                    <p data-i18n="footer_contact_phone">Phone: +992919667741</p>
+                    <p data-i18n="footer_contact_address">Address: Dushanbe, Tajikistan</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Tajikistan Tourism. All rights reserved.</p>
+                <p data-i18n="footer_copyright">&copy; 2024 Tajikistan Tourism. All rights reserved.</p>
             </div>
         </div>
     </footer>
