@@ -532,4 +532,17 @@
 
 body {
 	font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Заголовок секции карты */
+.map-section-title {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	font-weight: 700;
+	color: #1A3992;
+	transition: color 0.3s;
+}
+[data-theme='dark'] .map-section-title {
+	color: #e6e6fa;
 } 

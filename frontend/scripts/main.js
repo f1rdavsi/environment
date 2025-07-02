@@ -21,11 +21,11 @@ import { loadDestinations, loadMainDestinations } from './destinations.js';
 document.addEventListener('DOMContentLoaded', function () {
     initializeAuthForms();
     initializeThemeToggle();
-    initializeLanguageSelector();
     renderUserMenu();
     initializeSlider();
     initializeMobileMenu();
     loadTourismProducts();
+    initializeLanguageSelector();
     console.log('initializeAuthForms called');
     if (document.getElementById('events-list')) {
         loadEvents();

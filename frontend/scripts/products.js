@@ -17,7 +17,7 @@ function renderProducts(products) {
 				<h3>${product.title}</h3>
 				<p>${product.description}</p>
 				<div class="product-details">
-					<span class="duration">Duration: ${product.duration}</span>
+					<span class="duration">Duration: ${product.duration}$</span>
 					<span class="difficulty">Difficulty: ${product.difficulty}</span>
 				</div>
 				<a href="product.html?id=${product.id}" class="btn btn-primary learn-more-btn" data-id="${product.id}">Learn More</a>
