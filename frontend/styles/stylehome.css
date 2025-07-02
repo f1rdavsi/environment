@@ -659,76 +659,137 @@ html {
 
 .destination-card {
 	background: white;
-	border-radius: 1rem;
+	border-radius: 1.5rem;
 	overflow: hidden;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 1.5px 6px rgba(0,0,0,0.08);
+	border: 2px solid transparent;
+	background-clip: padding-box;
+	transition: transform 0.35s cubic-bezier(.4,2,.3,1), box-shadow 0.35s, border 0.35s;
+	opacity: 0;
+	animation: fadeInCard 0.7s forwards;
 }
 
-[data-theme='dark'] .destination-card {
-	background: #2d3748;
-	color: white;
+@keyframes fadeInCard {
+	to { opacity: 1; }
 }
 
 .destination-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+	transform: translateY(-10px) scale(1.03) rotate(-1deg);
+	box-shadow: 0 16px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+	border: 2px solid var(--primary-color);
 }
 
 .destination-image {
-	height: 250px;
+	height: 220px;
 	overflow: hidden;
+	position: relative;
 }
 
 .destination-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transition: transform 0.3s ease;
+	transition: transform 0.4s cubic-bezier(.4,2,.3,1);
+	border-radius: 1.5rem 1.5rem 0 0;
 }
 
 .destination-card:hover .destination-image img {
-	transform: scale(1.05);
+	transform: scale(1.08) rotate(1deg);
 }
 
 .destination-content {
-	padding: 1.5rem;
+	padding: 1.7rem 1.3rem 1.3rem 1.3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .destination-content h3 {
-	font-size: 1.25rem;
-	font-weight: 600;
+	font-size: 1.35rem;
+	font-weight: 700;
 	margin-bottom: 0.5rem;
-	color: var(--text-dark);
-}
-
-[data-theme='dark'] .destination-content h3 {
-	color: var(--text-light);
+	color: var(--primary-color);
+	letter-spacing: 0.5px;
 }
 
 .destination-content p {
-	color: #666;
-	margin-bottom: 1rem;
-	line-height: 1.6;
+	color: #444;
+	margin-bottom: 1.1rem;
+	line-height: 1.7;
+	font-size: 1.02rem;
 }
 
-[data-theme='dark'] .destination-content p {
-	color: #ccc;
-}
-
-.destination-tags {
+.destination-details {
+	margin-bottom: 1.1rem;
+	font-size: 0.98rem;
+	color: #888;
 	display: flex;
+	align-items: center;
 	gap: 0.5rem;
-	flex-wrap: wrap;
 }
 
-.tag {
-	background: var(--primary-color);
-	color: white;
-	padding: 0.25rem 0.75rem;
-	border-radius: 1rem;
-	font-size: 0.875rem;
+.destination-details .location {
+	font-size: 1.05rem;
+	color: var(--primary-color);
 	font-weight: 500;
+}
+
+.btn.btn-primary {
+	background: linear-gradient(90deg, var(--primary-color) 0%, #ea580c 100%);
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	box-shadow: 0 2px 8px rgba(249,115,22,0.08);
+	padding: 0.7rem 1.7rem;
+	font-size: 1rem;
+	letter-spacing: 0.5px;
+	transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.btn.btn-primary:hover {
+	background: linear-gradient(90deg, #ea580c 0%, var(--primary-color) 100%);
+	box-shadow: 0 4px 16px rgba(249,115,22,0.18);
+	transform: scale(1.06);
+}
+
+@media (max-width: 900px) {
+	.destinations-grid {
+		grid-template-columns: 1fr;
+	}
+	.destination-image {
+		height: 180px;
+	}
+}
+
+@media (max-width: 600px) {
+	.destination-content {
+		padding: 1.1rem 0.7rem 0.9rem 0.7rem;
+	}
+	.destination-image {
+		height: 120px;
+	}
+	.destination-card {
+		border-radius: 1rem;
+	}
+}
+
+[data-theme='dark'] .destination-card {
+	background: #23272f;
+	color: #fff;
+	border: 2px solid #333;
+}
+
+[data-theme='dark'] .destination-card:hover {
+	border: 2px solid var(--primary-color);
+	box-shadow: 0 16px 40px rgba(249,115,22,0.10), 0 2px 8px rgba(0,0,0,0.18);
+}
+
+[data-theme='dark'] .destination-content h3 {
+	color: #fff;
+}
+
+[data-theme='dark'] .destination-details .location {
+	color: #fed7aa;
 }
 
 /* Categories Section */
@@ -1261,4 +1322,206 @@ html {
 	.map-placeholder {
 		padding: 2rem;
 	}
+}
+
+/* --- Стили для сообщений об ошибке и пустых результатов --- */
+.empty-message, .error-message {
+    background: linear-gradient(90deg, #fff7ed 0%, #ffe4e6 100%);
+    color: #ea580c;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 2rem auto;
+    box-shadow: 0 2px 12px rgba(249,115,22,0.07);
+    max-width: 500px;
+    letter-spacing: 0.2px;
+    opacity: 0.95;
+}
+[data-theme='dark'] .empty-message, [data-theme='dark'] .error-message {
+    background: linear-gradient(90deg, #2d3748 0%, #1e293b 100%);
+    color: #ffb366;
+    box-shadow: 0 2px 12px rgba(249,115,22,0.13);
+}
+
+/* --- Улучшенные стили для input и select в фильтрах (dark mode) --- */
+[data-theme='dark'] .products-controls input[type="text"],
+[data-theme='dark'] .products-controls select,
+[data-theme='dark'] .destinations-controls input[type="text"],
+[data-theme='dark'] .destinations-controls select,
+[data-theme='dark'] .events-controls input[type="text"],
+[data-theme='dark'] .events-controls select {
+    background: #2d3748;
+    color: #fff;
+    border: 1.5px solid #444;
+    padding: 0.7rem 1.1rem;
+    box-shadow: 0 2px 8px rgba(249,115,22,0.10);
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+[data-theme='dark'] .products-controls input[type="text"]:focus,
+[data-theme='dark'] .products-controls select:focus,
+[data-theme='dark'] .destinations-controls input[type="text"]:focus,
+[data-theme='dark'] .destinations-controls select:focus,
+[data-theme='dark'] .events-controls input[type="text"]:focus,
+[data-theme='dark'] .events-controls select:focus {
+    background: #23272f;
+    border: 1.5px solid var(--primary-color);
+    box-shadow: 0 4px 16px rgba(249,115,22,0.18);
+}
+.products-controls input[type="text"]::placeholder,
+.destinations-controls input[type="text"]::placeholder,
+.events-controls input[type="text"]::placeholder {
+    color: #aaa;
+    opacity: 1;
+    font-size: 1.02rem;
+}
+[data-theme='dark'] .products-controls input[type="text"]::placeholder,
+[data-theme='dark'] .destinations-controls input[type="text"]::placeholder,
+[data-theme='dark'] .events-controls input[type="text"]::placeholder {
+    color: #bbb;
+    opacity: 1;
+}
+.products-controls select,
+.destinations-controls select,
+.events-controls select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ea580c" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1.2em;
+    padding-right: 2.2em;
+}
+[data-theme='dark'] .products-controls select,
+[data-theme='dark'] .destinations-controls select,
+[data-theme='dark'] .events-controls select {
+    background-color: #2d3748;
+    color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffb366" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+.products-controls input[type="text"]:hover,
+.products-controls select:hover,
+.destinations-controls input[type="text"]:hover,
+.destinations-controls select:hover,
+.events-controls input[type="text"]:hover,
+.events-controls select:hover {
+    border: 1.5px solid var(--primary-color);
+    box-shadow: 0 2px 12px rgba(249,115,22,0.13);
+}
+
+/* --- Повышенная специфичность для input и select в фильтрах --- */
+main .products-controls input[type="text"],
+main .products-controls select,
+main .destinations-controls input[type="text"],
+main .destinations-controls select,
+main .events-controls input[type="text"],
+main .events-controls select {
+    padding: 0.7rem 1.1rem;
+    border-radius: 0.7rem;
+    border: 1.5px solid #e2e8f0;
+    background: #fff;
+    font-size: 1.05rem;
+    margin-right: 1rem;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 2px 8px rgba(249,115,22,0.04);
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+    min-width: 160px;
+    max-width: 260px;
+    color: #222;
+}
+main .products-controls input[type="text"]:focus,
+main .products-controls select:focus,
+main .destinations-controls input[type="text"]:focus,
+main .destinations-controls select:focus,
+main .events-controls input[type="text"]:focus,
+main .events-controls select:focus {
+    border: 1.5px solid var(--primary-color);
+    box-shadow: 0 4px 16px rgba(249,115,22,0.13);
+    background: #fff7ed;
+}
+main .products-controls input[type="text"]::placeholder,
+main .destinations-controls input[type="text"]::placeholder,
+main .events-controls input[type="text"]::placeholder {
+    color: #aaa;
+    opacity: 1;
+    font-size: 1.02rem;
+}
+main .products-controls select,
+main .destinations-controls select,
+main .events-controls select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ea580c" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1.2em;
+    padding-right: 2.2em;
+}
+main .products-controls input[type="text"]:hover,
+main .products-controls select:hover,
+main .destinations-controls input[type="text"]:hover,
+main .destinations-controls select:hover,
+main .events-controls input[type="text"]:hover,
+main .events-controls select:hover {
+    border: 1.5px solid var(--primary-color);
+    box-shadow: 0 2px 12px rgba(249,115,22,0.13);
+}
+@media (max-width: 700px) {
+    main .products-controls,
+    main .destinations-controls,
+    main .events-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.2rem;
+    }
+    main .products-controls input[type="text"],
+    main .products-controls select,
+    main .destinations-controls input[type="text"],
+    main .destinations-controls select,
+    main .events-controls input[type="text"],
+    main .events-controls select {
+        margin-right: 0;
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+[data-theme='dark'] main .products-controls input[type="text"],
+[data-theme='dark'] main .products-controls select,
+[data-theme='dark'] main .destinations-controls input[type="text"],
+[data-theme='dark'] main .destinations-controls select,
+[data-theme='dark'] main .events-controls input[type="text"],
+[data-theme='dark'] main .events-controls select {
+    background: #2d3748;
+    color: #fff;
+    border: 1.5px solid #444;
+    padding: 0.7rem 1.1rem;
+    box-shadow: 0 2px 8px rgba(249,115,22,0.10);
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+[data-theme='dark'] main .products-controls input[type="text"]:focus,
+[data-theme='dark'] main .products-controls select:focus,
+[data-theme='dark'] main .destinations-controls input[type="text"]:focus,
+[data-theme='dark'] main .destinations-controls select:focus,
+[data-theme='dark'] main .events-controls input[type="text"]:focus,
+[data-theme='dark'] main .events-controls select:focus {
+    background: #23272f;
+    border: 1.5px solid var(--primary-color);
+    box-shadow: 0 4px 16px rgba(249,115,22,0.18);
+}
+[data-theme='dark'] main .products-controls input[type="text"]::placeholder,
+[data-theme='dark'] main .destinations-controls input[type="text"]::placeholder,
+[data-theme='dark'] main .events-controls input[type="text"]::placeholder {
+    color: #bbb;
+    opacity: 1;
+}
+[data-theme='dark'] main .products-controls select,
+[data-theme='dark'] main .destinations-controls select,
+[data-theme='dark'] main .events-controls select {
+    background-color: #2d3748;
+    color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffb366" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
 }

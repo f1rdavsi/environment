@@ -437,6 +437,24 @@
 .reg-footer a:hover {
 	color: #1d4ed8;
 }
+.reg-message {
+	margin-bottom: 16px;
+	text-align: center;
+	font-size: 1rem;
+	padding: 8px 0;
+}
+.reg-message.success {
+	color: #1a7f37;
+	background: #e6f9ed;
+	border: 1px solid #b6e2c6;
+	border-radius: 4px;
+}
+.reg-message.error {
+	color: #b91c1c;
+	background: #fee2e2;
+	border: 1px solid #fca5a5;
+	border-radius: 4px;
+}
 @media (max-width: 900px) {
 	.reg-wrapper { width: 90vw; padding: 1.5rem 0.5rem; }
 }
