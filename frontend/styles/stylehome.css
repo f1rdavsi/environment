@@ -19,7 +19,7 @@
 }
 
 body {
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+	font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 	overflow-x: hidden;
 }
 
@@ -428,6 +428,7 @@ body {
 .hero-title {
 	font-size: clamp(2.5rem, 8vw, 8rem);
 	font-weight: 700;
+	font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 	margin-bottom: 1rem;
 	animation: fadeInUp 1s ease-out;
 }
@@ -1524,4 +1525,39 @@ main .events-controls select:hover {
     background-color: #2d3748;
     color: #fff;
     background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffb366" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+
+#preloader {
+	position: fixed;
+	z-index: 9999;
+	inset: 0;
+	background: #1a1a1a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.6s;
+}
+#preloader-logo {
+	width: 500px;
+	height: auto;
+	animation: preloader-updown 1.2s ease-in-out infinite;
+}
+@keyframes preloader-updown {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-32px); }
+	100% { transform: translateY(0); }
+}
+#preloader.preloader-hide {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(80px) scale(0.96);
+    transition: opacity 1s cubic-bezier(0.4,0,0.2,1), transform 1s cubic-bezier(0.4,0,0.2,1);
+}
+.scroll-animate.scroll-animate-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }

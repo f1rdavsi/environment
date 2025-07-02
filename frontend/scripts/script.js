@@ -1,3 +1,12 @@
+// Не показывать прелоадер на registration и login
+if (
+	window.location.pathname.includes('registration.html') ||
+	window.location.pathname.includes('login.html')
+) {
+	const preloader = document.getElementById('preloader');
+	if (preloader) preloader.style.display = 'none';
+}
+
 // Проверка токена на главной странице
 if (
 	window.location.pathname.endsWith('index.html') ||
@@ -6,6 +15,8 @@ if (
 ) {
 	const accessToken = localStorage.getItem('access_token');
 	if (!accessToken) {
+		const preloader = document.getElementById('preloader');
+		if (preloader) preloader.style.display = 'none';
 		window.location.href = 'registration.html';
 	}
 }
@@ -622,3 +633,28 @@ function loadEvents() {
 if (window.location.pathname.includes('events.html')) {
 	document.addEventListener('DOMContentLoaded', loadEvents);
 }
+
+window.addEventListener('load', function() {
+	const preloader = document.getElementById('preloader');
+	if (preloader) {
+		if (
+			window.location.pathname.endsWith('index.html') ||
+			window.location.pathname === '/' ||
+			window.location.pathname === '/frontend/pages/index.html'
+		) {
+			setTimeout(() => {
+				preloader.classList.add('preloader-hide');
+				setTimeout(() => {
+					preloader.style.display = 'none';
+					preloader.remove();
+				}, 700);
+			}, 3000);
+		} else {
+			preloader.classList.add('preloader-hide');
+			setTimeout(() => {
+				preloader.style.display = 'none';
+				preloader.remove();
+			}, 700);
+		}
+	}
+});

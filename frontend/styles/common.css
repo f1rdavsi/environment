@@ -528,4 +528,8 @@
 }
 .theme-wave.theme-wave-light {
 	background: #fff;
+}
+
+body {
+	font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 } 

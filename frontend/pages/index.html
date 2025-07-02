@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Environment</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/stylehome.css">
     <link rel="stylesheet" href="../styles/common.css">
 </head>
 <body>
+<div id="preloader">
+  <img src="../assets/cropped-TJ_Tourism_Logo_white.png" alt="Loading..." id="preloader-logo">
+</div>
     <header class="header-container">
         <!-- Background Images -->
         <div class="background-slider">
@@ -127,24 +132,24 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- About Section -->
-        <section class="about-section">
+        <section class="about-section scroll-animate">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Discover Tajikistan</h2>
                     <p class="section-subtitle">A land of breathtaking mountains, crystal-clear lakes, and rich cultural heritage</p>
                 </div>
                 <div class="about-grid">
-                    <div class="about-card">
+                    <div class="about-card scroll-animate">
                         <div class="card-icon">🏔️</div>
                         <h3>Majestic Mountains</h3>
                         <p>Home to the Pamir Mountains, known as the "Roof of the World", with peaks reaching over 7,000 meters.</p>
                     </div>
-                    <div class="about-card">
+                    <div class="about-card scroll-animate">
                         <div class="card-icon">🏞️</div>
                         <h3>Natural Beauty</h3>
                         <p>From the turquoise waters of Iskanderkul to the vast alpine meadows, nature's beauty is everywhere.</p>
                     </div>
-                    <div class="about-card">
+                    <div class="about-card scroll-animate">
                         <div class="card-icon">🏛️</div>
                         <h3>Ancient Culture</h3>
                         <p>Centuries-old traditions, vibrant bazaars, and warm hospitality define Tajik culture.</p>
@@ -154,7 +159,7 @@
         </section>
 
         <!-- Featured Destinations -->
-        <section class="destinations-section">
+        <section class="destinations-section scroll-animate">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Popular Destinations</h2>
@@ -165,32 +170,32 @@
         </section>
 
         <!-- Categories Section -->
-        <section class="categories-section">
+        <section class="categories-section scroll-animate">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Explore by Category</h2>
                     <p class="section-subtitle">Find your perfect adventure</p>
                 </div>
                 <div class="categories-grid">
-                    <div class="category-card">
+                    <div class="category-card scroll-animate">
                         <div class="category-icon">🏔️</div>
                         <h3>Mountains</h3>
                         <p>Climb the highest peaks and explore remote valleys</p>
                         <a href="#" class="category-link">Explore Mountains</a>
                     </div>
-                    <div class="category-card">
+                    <div class="category-card scroll-animate">
                         <div class="category-icon">🏞️</div>
                         <h3>Lakes</h3>
                         <p>Discover crystal-clear alpine lakes and rivers</p>
                         <a href="#" class="category-link">Explore Lakes</a>
                     </div>
-                    <div class="category-card">
+                    <div class="category-card scroll-animate">
                         <div class="category-icon">🏛️</div>
                         <h3>Cultural Sites</h3>
                         <p>Visit ancient monuments and historical places</p>
                         <a href="#" class="category-link">Explore Culture</a>
                     </div>
-                    <div class="category-card">
+                    <div class="category-card scroll-animate">
                         <div class="category-icon">🏕️</div>
                         <h3>Adventure</h3>
                         <p>Hiking, camping, and outdoor activities</p>
@@ -248,6 +253,7 @@
         </div>
     </footer>
 
-    <script type="module" src="../scripts/main.js"></script>
+    <script src="../scripts/preloader.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
