@@ -1547,6 +1547,16 @@ main .events-controls select:hover {
 	50% { transform: translateY(-32px); }
 	100% { transform: translateY(0); }
 }
+@media (max-width: 900px) {
+	#preloader-logo {
+		width: 300px;
+	}
+}
+@media (max-width: 600px) {
+	#preloader-logo {
+		width: 290px;
+	}
+}
 #preloader.preloader-hide {
 	opacity: 0;
 	pointer-events: none;
