@@ -97,4 +97,20 @@
 	.products-grid {
 		grid-template-columns: 1fr;
 	}
+}
+
+/* --- SVG Map Hover Animation --- */
+#tj-map path {
+	transition: fill 0.3s cubic-bezier(0.4,0,0.2,1), filter 0.3s cubic-bezier(0.4,0,0.2,1);
+	cursor: pointer;
+}
+#tj-map path:hover {
+	fill: #1A3992 !important;
+	filter: drop-shadow(0 0 16px #1A3992cc);
+}
+#tj-map text {
+	transition: fill 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+#tj-map path:hover + text, #tj-map path:focus + text {
+	fill: #1A3992;
 } 

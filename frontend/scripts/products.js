@@ -20,10 +20,23 @@ function renderProducts(products) {
 					<span class="duration">Duration: ${product.duration}</span>
 					<span class="difficulty">Difficulty: ${product.difficulty}</span>
 				</div>
-				<a href="#" class="btn btn-primary">Learn More</a>
+				<a href="product.html?id=${product.id}" class="btn btn-primary learn-more-btn" data-id="${product.id}">Learn More</a>
 			</div>
 		</div>
 	`).join('')
+
+	// Добавляю обработчик для всех кнопок Learn More
+	setTimeout(() => {
+		document.querySelectorAll('.learn-more-btn').forEach(btn => {
+			btn.addEventListener('click', function(e) {
+				e.preventDefault();
+				const id = this.getAttribute('data-id');
+				if (id) {
+					window.location.href = `product.html?id=${id}`;
+				}
+			});
+		});
+	}, 0);
 }
 
 function updateCategoryFilter() {

@@ -8,6 +8,7 @@ class TourismProduct(models.Model):
     image_url = models.URLField()
     duration = models.CharField(max_length=50)
     difficulty = models.CharField(max_length=50)
+    category = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return self.title
