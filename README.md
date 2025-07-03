@@ -4,6 +4,39 @@ Welcome to **environment** – an interactive web platform that celebrates the b
 
 ---
 
+## 🌐 Multilingual Translations (i18n)
+
+The project implements multilingual support through a separate translations folder:
+
+- `frontend/translate/en.js` — English translations
+- `frontend/translate/ko.js` — Korean translations
+- `frontend/translate/index.js` — combines all languages into a `translations` object
+
+### Usage
+
+Translations are imported in JS like this:
+```js
+import { translations } from '../translate/index.js';
+```
+
+### Available Languages
+- `en` — English
+- `ko` — Korean
+
+### Translation Structure
+- Main elements (headers, navigation)
+- Pages (home, products, destinations, events, information, contacts)
+- Forms (login, registration, contacts)
+- Sliders for each page
+- Error messages and notifications
+
+### Adding a New Language
+1. Create a new file, e.g., `ru.js`
+2. Add export to `index.js`
+3. Update logic in `language.js` if necessary
+
+---
+
 ## ✨ Project Highlights
 
 - **Dynamic tourism product catalog** with filters, search, and detailed pages

@@ -1,5 +1,5 @@
 // Модуль для регистрации и логина
-import { translations } from './language.js';
+import { translations } from '../translate/index.js';
 
 function getMessage(key) {
 	const lang = localStorage.getItem('lang') || 'en';

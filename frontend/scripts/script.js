@@ -1,4 +1,5 @@
-import { translations, initializeLanguageSelector, setLanguage } from './language.js';
+import { translations } from '../translate/index.js';
+import { initializeLanguageSelector, setLanguage } from './language.js';
 
 // Не показывать прелоадер на registration и login
 if (
