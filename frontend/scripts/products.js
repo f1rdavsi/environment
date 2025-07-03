@@ -5,7 +5,7 @@ function renderProducts(products) {
 	const grid = document.getElementById('productsGrid')
 	if (!grid) return
 	if (!products.length) {
-		grid.innerHTML = '<div class="empty-message">Нет продуктов для отображения.</div>'
+		grid.innerHTML = '<div class="empty-message">No products to display.</div>'
 		return
 	}
 	grid.innerHTML = products.map(product => `
@@ -17,33 +17,20 @@ function renderProducts(products) {
 				<h3>${product.title}</h3>
 				<p>${product.description}</p>
 				<div class="product-details">
-					<span class="duration">Duration: ${product.duration}$</span>
+					<span class="duration">Duration: ${product.duration}</span>
 					<span class="difficulty">Difficulty: ${product.difficulty}</span>
 				</div>
-				<a href="product.html?id=${product.id}" class="btn btn-primary learn-more-btn" data-id="${product.id}">Learn More</a>
+					<a href="#" class="btn btn-primary learn-more-btn" data-id="${product.id}">Learn More</a>
 			</div>
 		</div>
 	`).join('')
-
-	// Добавляю обработчик для всех кнопок Learn More
-	setTimeout(() => {
-		document.querySelectorAll('.learn-more-btn').forEach(btn => {
-			btn.addEventListener('click', function(e) {
-				e.preventDefault();
-				const id = this.getAttribute('data-id');
-				if (id) {
-					window.location.href = `product.html?id=${id}`;
-				}
-			});
-		});
-	}, 0);
 }
 
 function updateCategoryFilter() {
 	const select = document.getElementById('products-category-filter')
 	if (!select) return
 	const categories = Array.from(new Set(allProducts.map(p => p.category).filter(Boolean)))
-	select.innerHTML = '<option value="">Все категории</option>' +
+	select.innerHTML = '<option value="">All categories</option>' +
 		categories.map(cat => `<option value="${cat}">${cat}</option>`).join('')
 }
 
@@ -71,8 +58,8 @@ export function loadTourismProducts() {
 			filterAndRenderProducts()
 		})
 		.catch(error => {
-			grid.innerHTML = '<div class="error-message">Ошибка загрузки данных.</div>'
-			console.error('Ошибка загрузки туристических продуктов:', error)
+			grid.innerHTML = '<div class="error-message">Error loading data.</div>'
+			console.error('Error loading tourism products:', error)
 		})
 	// Навешиваем обработчики
 	document.getElementById('products-search')?.addEventListener('input', filterAndRenderProducts)

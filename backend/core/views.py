@@ -8,6 +8,7 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.db import models
 from users.models import UserProfile
+from rest_framework.generics import RetrieveAPIView
 
 # Create your views here.
 

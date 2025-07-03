@@ -33,11 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (isAuthPage) {
         // Для страниц аутентификации - только базовые функции
         initializeAuthForms();
-        
-        // Инициализируем селектор языка
         initializeLanguageSelector();
-        
-        // Устанавливаем язык и переводим контент
         const savedLang = localStorage.getItem('lang') || 'en';
         setLanguage(savedLang);
     } else {
@@ -48,14 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
         initializeSlider();
         initializeMobileMenu();
         loadTourismProducts();
-        
-        // Инициализируем селектор языка
         initializeLanguageSelector();
-        
-        // Устанавливаем язык и переводим контент
         const savedLang = localStorage.getItem('lang') || 'en';
         setLanguage(savedLang);
-        
         if (document.getElementById('events-list')) {
             loadEvents();
         }

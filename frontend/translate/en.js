@@ -308,22 +308,29 @@ export const en = {
 	information_cta_desc: "Contact our travel experts for personalized advice and assistance.",
 	information_cta_contact: "Contact Us",
 	information_cta_tours: "View Tours",
-	// Information slider
-	information_slider: [
-		{
-			title: 'INFORMATION',
-			subtitle: 'ESSENTIAL',
-			description: 'TRAVEL GUIDE',
-		},
-		{
-			title: 'INFORMATION',
-			subtitle: 'USEFUL',
-			description: 'TRAVEL TIPS',
-		},
-		{
-			title: 'INFORMATION',
-			subtitle: 'IMPORTANT',
-			description: 'TRAVEL FACTS',
-		},
-	],
+			// Information slider
+		information_slider: [
+			{
+				title: 'INFORMATION',
+				subtitle: 'ESSENTIAL',
+				description: 'TRAVEL GUIDE',
+			},
+			{
+				title: 'INFORMATION',
+				subtitle: 'USEFUL',
+				description: 'TRAVEL TIPS',
+			},
+			{
+				title: 'INFORMATION',
+				subtitle: 'IMPORTANT',
+				description: 'TRAVEL FACTS',
+			},
+		],
+		// Product page
+		product_page_title: "Product Details - Tajikistan",
+		product_not_found: "Product not found.",
+		product_category: "Category:",
+		product_duration: "Duration:",
+		product_difficulty: "Difficulty:",
+		product_contact_booking: "Contact for Booking",
 }; 

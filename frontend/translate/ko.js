@@ -308,22 +308,29 @@ export const ko = {
 	information_cta_desc: "개인화된 조언과 도움을 위해 여행 전문가에게 문의하세요.",
 	information_cta_contact: "연락처",
 	information_cta_tours: "투어 보기",
-	// Information slider
-	information_slider: [
-		{
-			title: '정보',
-			subtitle: '필수',
-			description: '여행 가이드',
-		},
-		{
-			title: '정보',
-			subtitle: '유용한',
-			description: '여행 팁',
-		},
-		{
-			title: '정보',
-			subtitle: '중요한',
-			description: '여행 사실',
-		},
-	],
+			// Information slider
+		information_slider: [
+			{
+				title: '정보',
+				subtitle: '필수',
+				description: '여행 가이드',
+			},
+			{
+				title: '정보',
+				subtitle: '유용한',
+				description: '여행 팁',
+			},
+			{
+				title: '정보',
+				subtitle: '중요한',
+				description: '여행 사실',
+			},
+		],
+		// Product page
+		product_page_title: "상품 상세 - 타지키스탄",
+		product_not_found: "상품을 찾을 수 없습니다.",
+		product_category: "카테고리:",
+		product_duration: "기간:",
+		product_difficulty: "난이도:",
+		product_contact_booking: "예약 문의",
 }; 
