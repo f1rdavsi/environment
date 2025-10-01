@@ -1,0 +1,266 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="contacts_page_title">Contact Us - Tajikistan</title>
+    <link rel="icon" type="image/x-icon" href="../assets/cropped-TJ_Tourism_Logo_white.png">
+    <link rel="stylesheet" href="../styles/stylehome.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
+</head>
+<body>
+    <header class="header-container">
+        <!-- Background Images -->
+        <div class="background-slider">
+            <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&h=800&fit=crop')"></div>
+            <div class="bg-slide" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F5808780.jpg&f=1&nofb=1&ipt=347d9b8fbb1e6c526e159a20b2afd0fa29bf9e6544e61b7f0d2973e52c5abd1b')"></div>
+            <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&h=800&fit=crop')"></div>
+        </div>
+        <div class="overlay"></div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div>
+                   <a href="index.html">
+                       <img class='logo-icon' src="../assets/cropped-TJ_Tourism_Logo_white.png" alt="Tajikistan Tourism">
+                   </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link" data-i18n="nav_home">HOME</a>
+                    <a href="tourism-products.html" class="nav-link" data-i18n="nav_products">TOURISM PRODUCTS</a>
+                    <a href="destinations.html" class="nav-link" data-i18n="nav_destinations">DESTINATIONS</a>
+                    <a href="events.html" class="nav-link" data-i18n="nav_events">EVENTS</a>
+                    <a href="information.html" class="nav-link" data-i18n="nav_info">INFORMATION</a>
+                    <a href="contacts.html" class="nav-link" data-i18n="nav_contacts">CONTACTS</a>
+                </div>
+
+                <!-- Right Controls -->
+                <div class="nav-controls">
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn">
+                            <span class="flag">en</span>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <div class="lang-option" data-lang="en" data-flag="en">
+                                <span class="flag">en</span>
+                                <span>English</span>
+                            </div>
+                            <div class="lang-option" data-lang="ko" data-flag="ko">
+                                <span class="flag">ko</span>
+                                <span>한국어</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+                        </svg>
+                    </button>
+
+                 
+
+                    <!-- Registration -->
+                    <a href="registration.html" class="registration-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            <path d="M19 13h-2v3h-3v2h3v3h2v-3h3v-2h-3z"/>
+                        </svg>
+                    </a>
+
+                    <!-- User Menu -->
+                    <div id="user-menu-container"></div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">HOME</a>
+                <a href="tourism-products.html" class="mobile-nav-link" data-i18n="nav_products">TOURISM PRODUCTS</a>
+                <a href="destinations.html" class="mobile-nav-link" data-i18n="nav_destinations">DESTINATIONS</a>
+                <a href="events.html" class="mobile-nav-link" data-i18n="nav_events">EVENTS</a>
+                <a href="information.html" class="mobile-nav-link" data-i18n="nav_info">INFORMATION</a>
+                <a href="contacts.html" class="mobile-nav-link" data-i18n="nav_contacts">CONTACTS</a>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" data-i18n="contacts_hero_title">CONTACT US</h1>
+                <h2 class="hero-subtitle" data-i18n="contacts_hero_subtitle">GET IN</h2>
+                <h3 class="hero-description" id="heroDescription" data-i18n="contacts_hero_description">TOUCH</h3>
+            </div>
+        </div>
+
+        <!-- Content Indicators -->
+        <div class="content-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+	 </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="contacts_get_touch">Get in Touch</h2>
+                    <p class="section-subtitle" data-i18n="contacts_subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h3 data-i18n="contacts_info_title">Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4 data-i18n="contacts_address">Address</h4>
+                                <p data-i18n="contacts_address_text">123 Tourism Street<br>Dushanbe, Tajikistan 734000</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4 data-i18n="contacts_phone">Phone</h4>
+                                <p data-i18n="contacts_phone_text">+992 48 123 4567<br>+992 48 123 4568</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4 data-i18n="contacts_email">Email</h4>
+                                <p data-i18n="contacts_email_text">info@tajikistan-tourism.com<br>support@tajikistan-tourism.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4 data-i18n="contacts_hours">Working Hours</h4>
+                                <p data-i18n="contacts_hours_text">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3 data-i18n="contacts_form_title">Send us a Message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name" data-i18n="contacts_form_name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="contacts_form_email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-i18n="contacts_form_phone">Phone Number</label>
+                                <input type="text" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" data-i18n="contacts_form_subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" data-i18n="contacts_form_select_subject">Select a subject</option>
+                                    <option value="general" data-i18n="contacts_form_general">General Inquiry</option>
+                                    <option value="booking" data-i18n="contacts_form_booking">Tour Booking</option>
+                                    <option value="support" data-i18n="contacts_form_support">Customer Support</option>
+                                    <option value="partnership" data-i18n="contacts_form_partnership">Partnership</option>
+                                    <option value="other" data-i18n="contacts_form_other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-i18n="contacts_form_message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-i18n="contacts_form_send">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="contacts_find_us">Find Us</h2>
+                    <p class="section-subtitle" data-i18n="contacts_map_subtitle">Visit our office in the heart of Dushanbe</p>
+                </div>
+                <div class="map-container">
+                    <div class="contacts-map-container" style="margin: 2rem 0;">
+                        <iframe
+                            width="100%"
+                            height="400"
+                            frameborder="0"
+                            style="border:0; border-radius: 1rem;"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=68.773%2C38.559%2C68.803%2C38.579&layer=mapnik&marker=38.569%2C68.788"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/cropped-TJ_Tourism_Logo_white.png" alt="Tajikistan Tourism">
+                    </div>
+                    <h3 data-i18n="footer_about_title">About Tajikistan Tourism</h3>
+                    <p data-i18n="footer_about_desc">Discover the natural beauty and rich cultural heritage of Tajikistan, a hidden gem in Central Asia.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-i18n="footer_links_title">Quick Links</h3>
+                    <ul>
+                        <li><a href="tourism-products.html" data-i18n="footer_link_products">Tourism Products</a></li>
+                        <li><a href="#" data-i18n="footer_link_guide">Travel Guide</a></li>
+                        <li><a href="#" data-i18n="footer_link_events">Events</a></li>
+                        <li><a href="contacts.html" data-i18n="footer_link_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-i18n="footer_contact_title">Contact Info</h3>
+                    <p data-i18n="footer_contact_email">Email: maks88821@gmai.com</p>
+                    <p data-i18n="footer_contact_phone">Phone: +992919667741</p>
+                    <p data-i18n="footer_contact_address">Address: Dushanbe, Tajikistan</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2024 Tajikistan Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../scripts/main.js"></script>
+</body>
+</html> 

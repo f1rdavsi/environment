@@ -1,0 +1,116 @@
+/* Tourism Products Page Styles */
+.products-section {
+	padding: 5rem 0;
+}
+
+.products-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+	margin-top: 3rem;
+}
+
+.product-card {
+	background: white;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='dark'] .product-card {
+	background: #2d3748;
+	color: white;
+}
+
+.product-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+	height: 250px;
+	overflow: hidden;
+}
+
+.product-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+	transform: scale(1.05);
+}
+
+.product-content {
+	padding: 1.5rem;
+}
+
+.product-content h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	color: var(--text-dark);
+}
+
+[data-theme='dark'] .product-content h3 {
+	color: var(--text-light);
+}
+
+.product-content p {
+	color: #666;
+	margin-bottom: 1rem;
+	line-height: 1.6;
+}
+
+[data-theme='dark'] .product-content p {
+	color: #ccc;
+}
+
+.product-details {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.duration,
+.difficulty {
+	background: #f1f5f9;
+	color: #475569;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+[data-theme='dark'] .duration,
+[data-theme='dark'] .difficulty {
+	background: #374151;
+	color: #d1d5db;
+}
+
+/* Responsive adjustments for products */
+@media (max-width: 768px) {
+	.products-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* --- SVG Map Hover Animation --- */
+#tj-map path {
+	transition: fill 0.3s cubic-bezier(0.4,0,0.2,1), filter 0.3s cubic-bezier(0.4,0,0.2,1);
+	cursor: pointer;
+}
+#tj-map path:hover {
+	fill: #1A3992 !important;
+	filter: drop-shadow(0 0 16px #1A3992cc);
+}
+#tj-map text {
+	transition: fill 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+#tj-map path:hover ~ text {
+	fill: #fff !important;
+} 

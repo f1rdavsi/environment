@@ -1,0 +1,100 @@
+/* Destinations Page Styles */
+.destinations-section {
+	padding: 5rem 0;
+}
+
+.destinations-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+	margin-top: 3rem;
+}
+
+.destination-card {
+	background: white;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='dark'] .destination-card {
+	background: #2d3748;
+	color: white;
+}
+
+.destination-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.destination-image {
+	height: 250px;
+	overflow: hidden;
+}
+
+.destination-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.destination-card:hover .destination-image img {
+	transform: scale(1.05);
+}
+
+.destination-content {
+	padding: 1.5rem;
+}
+
+.destination-content h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	color: var(--text-dark);
+}
+
+[data-theme='dark'] .destination-content h3 {
+	color: var(--text-light);
+}
+
+.destination-content p {
+	color: #666;
+	margin-bottom: 1rem;
+	line-height: 1.6;
+}
+
+[data-theme='dark'] .destination-content p {
+	color: #ccc;
+}
+
+.destination-details {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.location,
+.altitude {
+	background: #f1f5f9;
+	color: #475569;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+[data-theme='dark'] .location,
+[data-theme='dark'] .altitude {
+	background: #374151;
+	color: #d1d5db;
+}
+
+/* Responsive adjustments for destinations */
+@media (max-width: 768px) {
+	.destinations-grid {
+		grid-template-columns: 1fr;
+	}
+} 
