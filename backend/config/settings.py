@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'environment_db',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'HOST': 'mysql',
         'PORT': '3306',
     }
 }
