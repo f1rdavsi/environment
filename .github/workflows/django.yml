@@ -48,6 +48,7 @@ jobs:
       - name: Миграции и тесты
         working-directory: ./backend
         run: |
+          sleep 10
           python manage.py migrate --noinput
           python manage.py collectstatic --noinput
           python manage.py test
